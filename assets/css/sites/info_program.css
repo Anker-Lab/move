@@ -1,0 +1,89 @@
+/* =========================
+   COMING SOON
+========================= */
+
+.coming-soon {
+  min-height: 50vh;
+  padding: 5rem 0;
+}
+
+.coming-soon-layout {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* VENSTRE SIDE */
+.coming-soon-content {
+  max-width: 650px;
+}
+
+.coming-soon-content h2 {
+  margin-bottom: 1rem;
+}
+
+.coming-soon-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* CTA */
+.newsletter-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* SOCIALS */
+.social-container {
+  display: flex;
+  justify-content: flex-start; /* 👈 helt til venstre */
+  gap: 1rem;
+}
+
+.social-container img {
+  width: 24px;
+  height: 24px;
+
+  opacity: 0.9;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.social-container img:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* HØJRE BILLEDE */
+.coming-soon-image {
+  justify-self: end; /* 👈 helt til højre */
+}
+
+.coming-soon-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 360px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  .coming-soon-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .coming-soon-image {
+    justify-self: stretch;
+  }
+
+  .coming-soon-image img {
+    max-width: 100%;
+    height: 280px;
+  }
+}

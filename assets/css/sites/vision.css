@@ -1,0 +1,145 @@
+/* =========================
+   BASE
+========================= */
+
+.vision {
+  background: var(--color-bg);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 6rem 0;
+}
+
+.section.alt {
+  background: var(--color-bg-2);
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  max-width: 700px;
+}
+
+/* =========================
+   GRID SYSTEM (GENBRUGES OVERALT)
+========================= */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.grid-2.reverse {
+  direction: rtl;
+}
+
+.grid-2.reverse > * {
+  direction: ltr;
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+.media img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   TYPO
+========================= */
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+  background: var(--color-bg-black);
+  color: var(--color-text-light);
+  text-align: center;
+
+  padding: 6rem 0;
+}
+
+.quote p {
+  opacity: 0.75;
+}
+
+/* =========================
+   FEATURE SECTION
+========================= */
+
+.vision-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.vision-feature-media img {
+  width: 60%;
+  border-radius: 24px;
+}
+
+/* =========================
+   LIST
+========================= */
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   signup
+========================= */
+
+.ending {
+  background: var(--color-bg-2);
+}
+
+.signup p {
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .grid-2,
+  .vision-feature {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}

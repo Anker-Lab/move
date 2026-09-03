@@ -1,0 +1,108 @@
+/* =========================
+   Frivillig
+   ========================= */
+
+.volunteer-section {
+  padding: 6rem 0;
+  background: var(--color-bg);
+}
+
+.section-header {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.volunteer-card {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  transition: 0.2s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.volunteer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.volunteer-card h3 {
+  padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.volunteer-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-card img {
+    height: 240px;
+  }
+}
+
+
+/* =========================
+   VOLUNTEER COMING SOON
+   ========================= */
+
+.not-open {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 6rem 0;
+}
+
+.not-open .container {
+  max-width: 700px;
+}
+
+.not-open h1 {
+  margin-bottom: 1rem;
+}
+
+.not-open p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.not-open .error-actions {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

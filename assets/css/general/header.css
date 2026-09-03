@@ -1,0 +1,462 @@
+/* =========================
+   HEADER BASE
+   ========================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+
+  z-index: 1000;
+
+  color: var(--color-text-light);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   HEADER SCROLLED (WHITE MODE)
+   ========================= */
+
+header.scrolled {
+  background: rgba(255,255,255,0.95);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+}
+
+/* =========================
+   FORCE COLOR CONTROL (VIGTIGT)
+   ========================= */
+
+/* sikrer at ALT følger header farve */
+header a,
+header nav a {
+  color: inherit;
+}
+
+/* =========================
+   LEFT SIDE
+   ========================= */
+
+.hamburger {
+  display: none;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* social icons */
+.social-link img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  transition: 0.2s ease;
+}
+
+.social-link:hover img {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   NAV
+   ========================= */
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* underline hover */
+nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   RIGHT SIDE
+   ========================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.desktop-cta {
+  border-radius: var(--radius-header);
+}
+
+/* =========================
+   HAMBURGER (FIXED COLORS)
+   ========================= */
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  color: inherit; /* VIGTIGT: følger header state */
+  transition: 0.2s ease;
+}
+
+/* =========================
+   LANGUAGE DROPDOWN
+   ========================= */
+
+.lang {
+  position: relative;
+  cursor: pointer;
+}
+
+.lang-icon {
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  min-width: 140px;
+  padding: 0.5rem;
+
+  background: var(--color-bg-black);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+
+  transition: 0.2s ease;
+}
+
+.lang:hover .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.lang-dropdown a {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.lang-dropdown a:hover {
+  background: var(--color-bg-2);
+  color: var(--color-text);
+}
+
+
+/* =========================
+   LANG DROPDOWN - SCROLLED
+   ========================= */
+header.scrolled .social-link img {
+  filter: brightness(0);
+}
+
+header.scrolled .lang-dropdown,
+header.menu-open .lang-dropdown {
+  background: white;
+  border: 1px solid var(--color-border);
+}
+
+/* hover på items */
+header.scrolled .lang-dropdown a:hover,
+header.menu-open .lang-dropdown a:hover {
+  background: var(--color-bg-2);
+}
+
+/* =========================
+   HAMBURGER
+   ========================= */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-text-light);
+  z-index: 2001;
+  transition: color 0.2s ease;
+}
+
+/* når header bliver hvid */
+header.scrolled .hamburger {
+  color: var(--color-text);
+}
+
+/* når menu er åben */
+header.menu-open .hamburger {
+  color: var(--color-text);
+}
+
+/* når hamburger er åben */
+header.menu-open {
+  background: rgba(255,255,255,0.96);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   MOBILE MENU OVERLAY
+   ========================= */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  top: var(--header-height);
+
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  padding: 2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: 0.25s ease;
+
+  z-index: 1500;
+}
+
+/* OPEN STATE */
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* LINKS */
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+/* CTA */
+.mobile-cta {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.mobile-menu .btn-secondary:hover {
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+/* SOCIALS */
+.mobile-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+/* =========================
+   MOBILE RULES
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    z-index: 2001;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .desktop-cta {
+    display: none;
+  }
+
+  .mobile-menu .btn-secondary:hover {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    transform: none;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-left .social-link {
+  display: none;
+}
+
+.mobile-socials {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mobile-socials .social-link {
+  display: flex;
+}
+
+.mobile-socials img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0); /* sorte ikoner */
+}
+
+  /* =========================
+   MOBILE MENU - ALWAYS WHITE
+   ========================= */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  top: var(--header-height);
+
+  background: #fff;
+  color: #000;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: 0.25s ease;
+
+  z-index: 1500;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* CTA (small + clean, ikke fuld bredde monster) */
+.mobile-cta {
+  width: auto;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-header);
+}
+
+/* LINKS */
+.mobile-menu a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   SOCIALS BOTTOM CENTER
+   ========================= */
+
+.mobile-socials {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.mobile-socials img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0);
+}
+
+/* slå hover fra på mobil */
+  .lang:hover .lang-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+  }
+
+  /* brug JS click i stedet */
+  .lang.open .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-socials {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.mobile-socials img {
+  width: 22px;
+  height: 22px;
+}
+}

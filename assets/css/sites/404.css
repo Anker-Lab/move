@@ -1,0 +1,51 @@
+/* =========================
+   error page
+   ========================= */
+.error-page {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+
+  /* 👉 BAGGRUNDEN */
+  background: url("/assets/images/404.png") center/cover no-repeat;
+}
+
+/* mørk overlay så tekst kan læses */
+.error-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+/* indhold ovenpå */
+.error-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 600px;
+  text-align: center;
+
+  color: white;
+}
+
+.error-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.error-content p {
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
