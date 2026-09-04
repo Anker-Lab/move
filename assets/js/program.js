@@ -245,3 +245,134 @@ function updateSunday() {
     }, 10000);
 
 });
+
+
+// --------------------------------------------------
+// DOWNLOAD PROGRAM
+// --------------------------------------------------
+
+const PROGRAM_FILES = {
+    voksen: {
+        image: "/assets/images/program/9e6ea793-0713-496b-9c96-abdb03fbc521.jpeg",
+        pdf: "/assets/images/program/9e6ea793-0713-496b-9c96-abdb03fbc521.pdf"
+    },
+
+    tween: {
+        image: null,
+        pdf: null
+    },
+
+    mini: {
+        image: null,
+        pdf: null
+    }
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll(".program-view").forEach(programView => {
+
+        const programType = programView.dataset.program;
+        const files = PROGRAM_FILES[programType];
+
+        if (!files) return;
+
+        const saveButton = programView.querySelector(".save-program-button");
+        const pdfButton = programView.querySelector(".download-pdf-button");
+
+
+        // --------------------------------------------------
+        // GEM PROGRAM
+        // --------------------------------------------------
+
+        if (!files.image) {
+
+            saveButton.disabled = true;
+
+        } else {
+
+            saveButton.addEventListener("click", async () => {
+
+                try {
+
+                    const response = await fetch(files.image);
+                    const blob = await response.blob();
+
+                    const file = new File(
+                        [blob],
+                        "MOVE26-program.jpeg",
+                        {
+                            type: "image/jpeg"
+                        }
+                    );
+
+
+                    // Hvis telefonen understøtter deling af filer
+                    if (
+                        navigator.share &&
+                        navigator.canShare &&
+                        navigator.canShare({
+                            files: [file]
+                        })
+                    ) {
+
+                        await navigator.share({
+                            files: [file],
+                            title: "MOVE26 program",
+                            text: "MOVE26 program"
+                        });
+
+                    } else {
+
+                        // Desktop / browser uden Share API
+                        const url = URL.createObjectURL(blob);
+
+                        const link = document.createElement("a");
+                        link.href = url;
+                        link.download = "MOVE26-program.jpeg";
+
+                        document.body.appendChild(link);
+                        link.click();
+                        link.remove();
+
+                        setTimeout(() => {
+                            URL.revokeObjectURL(url);
+                        }, 1000);
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "Kunne ikke gemme programmet:",
+                        error
+                    );
+
+                }
+
+            });
+
+        }
+
+
+        // --------------------------------------------------
+        // DOWNLOAD PDF
+        // --------------------------------------------------
+
+        if (!files.pdf) {
+
+            pdfButton.disabled = true;
+
+        } else {
+
+            pdfButton.addEventListener("click", () => {
+
+                window.open(files.pdf, "_blank");
+
+            });
+
+        }
+
+    });
+
+});

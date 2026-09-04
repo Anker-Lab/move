@@ -309,6 +309,12 @@
     opacity: 0.65;
 }
 
+.divider {
+  height: 1px;
+  background: #dedede;
+  margin: 25px 0;
+}
+
 
 /* SKIFT SIDE PÅ HVER ANDEN */
 
@@ -350,6 +356,31 @@
 
 .timeline-event.highlight .timeline-card p {
     opacity: 0.7;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 13px 15px;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.activity-item strong {
+    font-size: 15px;
+}
+
+.activity-item span {
+    font-size: 13px;
+    opacity: 0.6;
 }
 
 
@@ -398,7 +429,7 @@
 /* SØNDAG */
 .sunday {
     width: 100%;
-    margin: 0 auto 110px;
+    margin: 0 auto;
 }
 
 .sunday-heading {
@@ -958,6 +989,99 @@
 
 .sunday.current .sunday-content p {
     opacity: 0.75;
+}
+
+/* =========================
+   Download
+========================= */
+.program-download {
+    max-width: 700px;
+    margin: 100px auto 0;
+    padding: 35px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 24px;
+    background: #f8f8f8;
+}
+
+.program-download h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.program-download p {
+    max-width: 500px;
+    margin: 0 auto 25px;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.65;
+}
+
+.program-download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 999px;
+    background: #222;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.download-button:hover {
+    background: #111;
+    transform: translateY(-2px);
+}
+
+.download-button.secondary {
+    background: white;
+    color: #222;
+    border: 1px solid #ddd;
+}
+
+.download-button.secondary:hover {
+    background: #f2f2f2;
+}
+
+@media (max-width: 700px) {
+    .program-download {
+        display: none;
+    }
+
+    .program-download {
+        margin-bottom: 55px;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .program-download h3 {
+        font-size: 22px;
+    }
+
+    .program-download p {
+        font-size: 14px;
+    }
+
+    .program-download-buttons {
+        flex-direction: column;
+    }
+
+    .download-button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
 
 
