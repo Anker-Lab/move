@@ -9,507 +9,1488 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/logo/favicon/kib_logo_ikon_white_.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <link rel="apple-touch-icon" href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/logo/favicon/kib_logo_ikon_white_.png" type="image/png">
+  <link
+    rel="icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg"
+    type="image/svg+xml"
+  >
 
-  <link rel="stylesheet" href="/assets/css/general/style.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/layout.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/header.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/footer.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/sites/program.css?v=040926">
+  <link
+    rel="icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_.png"
+    type="image/png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_.png"
+    type="image/png"
+  >
+
+  <link rel="stylesheet" href="/assets/css/general/style.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/layout.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/header.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/footer.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/sites/program.css?v=080926">
 </head>
 
-<body class="black-header">
-  <div id="header"></div>
-    <main>
-      <section class="hero hero-program">
-        <div class="hero-overlay">
-          <div class="container">
-            <h1>Program</h1>
-          </div>
-        </div>
-      </section>
-      <section class="program-section">
-        <div class="container">
 
-          <!-- TOP -->
-          <div class="program-top">
-            <div>
-              <span class="program-eyebrow">MOVE26</span>
-              <h1>Program</h1>
-              <p>Her kan du se programmet for MOVE.</p>
+<body class="black-header">
+
+  <div id="header"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-program">
+
+      <div class="hero-overlay">
+
+        <div class="container">
+          <h1>Program</h1>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROGRAM -->
+    <section class="program-section">
+
+      <div class="container">
+
+
+        <!-- TOP -->
+        <div class="program-top">
+
+          <div>
+
+            <span class="program-eyebrow">
+              MOVE26
+            </span>
+
+            <h1>
+              Program
+            </h1>
+
+            <p>
+              Her kan du se programmet for MOVE.
+            </p>
+
+          </div>
+
+
+          <button
+            class="now-button"
+            id="nowButton"
+          >
+            Nu
+          </button>
+
+        </div>
+
+
+        <!-- PROGRAMVÆLGER -->
+        <div class="knapper">
+          <button data-program="mini">
+            MINI MOVE<br>
+            3 - 5 år
+          </button>
+
+          <button data-program="kids">
+            KIDS MOVE<br>
+            5 - 10 år
+          </button>
+
+          <button data-program="maxi">
+            MAXI MOVE<br>
+            11 - 13 år
+          </button>
+
+          <button class="active" data-program="voksen">
+            VOKSEN
+          </button>
+        </div>
+
+
+        <!-- ==================================================
+             VOKSENPROGRAM
+        =================================================== -->
+
+        <div
+          class="program-view active"
+          data-program="voksen"
+        >
+
+
+          <!-- FORÆLDRERUM -->
+          <section class="parent-room">
+
+            <div class="parent-room-content">
+
+              <span>
+                FOR FAMILIER
+              </span>
+
+              <h2>
+                For de mindste
+              </h2>
+
+              <p>
+                Hvis dit barn er for lille til Minikirke,
+                er I meget velkomne ude i caféen.
+                Her er der legetøj og TV, så du kan være sammen
+                med dit barn og samtidig følge med i programmet.
+              </p>
+
             </div>
 
-            <button class="now-button" id="nowButton">
-                Nu
-            </button>
-          </div>
+          </section>
 
-          <!-- PROGRAMVÆLGER -->
-          <div class="knapper">
-            <button class="active">Voksen</button>
-            <button>Tween & børnekirke</button>
-            <button>Minikirke</button>
-          </div>
 
-          <!-- VOKSENPROGRAM -->
-          <div class="program-view active" data-program="voksen">
+          <!-- FREDAG -->
+          <section class="program-day">
 
-            <!-- FORÆLDRERUM -->
-            <section class="parent-room">
-                <div class="parent-room-content">
-                    <span>FOR FAMILIER</span>
-                    <h2>For de mindste</h2>
-                    <p>
-                        Hvis dit barn er for lille til Minikirke,
-                        er I meget velkomne ude i caféen.
-                        Her er der legetøj og TV, så du kan være sammen
-                        med dit barn og samtidig følge med i programmet.
-                    </p>
+            <div class="day-heading">
+
+              <span>
+                11. SEPTEMBER
+              </span>
+
+              <h2>
+                Fredag
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- CHECK-IN -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T18:00"
+                data-end="2026-09-11T19:00"
+              >
+
+                <div class="timeline-time">
+                  18:00
                 </div>
-            </section>
-
-            <!-- FREDAG -->
-            <section class="program-day">
-              <div class="day-heading">
-                <span>11. SEPTEMBER</span>
-                <h2>Fredag</h2>
-              </div>
-
-              <div class="timeline">
-
-                <article class="timeline-event" data-start="2026-09-11T18:00" data-end="2026-09-11T19:00">
-                  <div class="timeline-time">
-                    18:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                    <div class="timeline-card">
-                      <span>ANKOMST</span>
-                      <h3>Check-in</h3>
-                      <p>
-                        Velkommen til MOVE! Du kan checke ind
-                        ved Samværkets hovedindgang.
-                      </p>
-                    </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-11T19:00" data-end="2026-09-11T21:00">
-                  <div class="timeline-time">
-                    19:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>ÅBNINGSMØDE</span>
-                    <h3>Session 1 · Mark Foster</h3>
-                    <p>
-                      Vi skyder MOVE i gang med et brag,
-                      når vores gæstetaler Mark Foster åbner konferencen.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-11T21:00" data-end="2026-09-11T22:00">
-                  <div class="timeline-time">
-                    21:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>FÆLLESSKAB</span>
-                    <h3>Café</h3>
-                    <p>
-                      Kom forbi til hygge, fællesskab og noget godt at spise.
-                      Caféen drives af Believe fra Kildevæld, som rejser ud for at dele Guds ord.
-                      Alt overskud går til deres rejse til Uganda.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </section>
-
-            <!-- LØRDAG -->
-            <section class="program-day">
-
-              <div class="day-heading">
-                <span>12. SEPTEMBER</span>
-                <h2>Lørdag</h2>
-              </div>
-
-              <div class="timeline">
-
-                <article class="timeline-event" data-start="2026-09-12T09:30" data-end="2026-09-12T10:30">
-                  <div class="timeline-time">
-                    09:30
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>MØDE</span>
-                    <h3>Session 2 · Jesper Kure</h3>
-                    <p>
-                      Jesper Kure deler et budskab med fokus
-                      på tro, håb og et liv forvandlet af Gud.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T10:30" data-end="2026-09-12T11:00">
-                  <div class="timeline-time">
-                    10:30
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>PAUSE</span>
-                    <h3>Kaffe & fællesskab</h3>
-                    <p>
-                      Tag en kop kaffe, find nogen at snakke med
-                      og nyd fællesskabet i caféen.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T11:00" data-end="2026-09-12T12:00">
-                  <div class="timeline-time">
-                    11:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>MØDE</span>
-                    <h3>Session 3 · Mark Foster</h3>
-                    <p>
-                      Mark Foster deler et
-                      budskab, der inviterer os til at lade Gud
-                      forandre vores liv.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T12:00" data-end="2026-09-12T12:30">
-                  <div class="timeline-time">
-                    12:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>MAD</span>
-                    <h3>Frokost</h3>
-                    <p>
-                      Vi samles til frokost og godt fællesskab.
-                      Frokosten er inkluderet i din billet.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T13:30" data-end="2026-09-12T14:30">
-                  <div class="timeline-time">
-                    13:30
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>Q&A</span>
-                    <h3>Q&A</h3>
-                    <p>
-                      Har du et spørgsmål?
-                      Her får du mulighed for at stille det og få svar.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T14:30" data-end="2026-09-12T15:15">
-                  <div class="timeline-time">
-                    14:30
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>AKTIVITET</span>
-                    <h3>Electives</h3>
-                    <p>
-                      Vælg mellem forskellige aktiviteter og sessions.
-                      Se mere om de forskellige muligheder nedenfor.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T15:15" data-end="2026-09-12T15:30">
-                  <div class="timeline-time">
-                    15:15
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>PAUSE</span>
-                    <h3>Kaffe & fællesskab</h3>
-                    <p>
-                      Vi tager en lille pause med kaffe og tid
-                      til at hænge ud i caféen. Kaffen er inkluderet i billetten.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T15:30" data-end="2026-09-12T17:00">
-                  <div class="timeline-time">
-                    15:30
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>AKTIVITETER</span>
-                    <h3>Eftermiddag med aktiviteter</h3>
-
-                    <p>
-                      Eftermiddagen er fyldt med hygge og fællesskab.
-                      Du kan vælge mellem flere forskellige aktiviteter:
-                    </p>
-
-                    <div class="activity-list">
-                      <div class="activity-item">
-                        <strong>🎲 Brætspil</strong>
-                        <span>Hygge og spil i caféen</span>
-                      </div>
-
-                      <div class="activity-item">
-                        <strong>🏆 Stigegolf & petanque</strong>
-                        <span>Aktiviteter udenfor foran Samværket</span>
-                      </div>
-
-                      <div class="activity-item">
-                        <strong>🚶 Gåtur</strong>
-                        <span>En hyggelig gåtur med afgang fra hovedindgangen</span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T17:00" data-end="2026-09-12T17:30">
-                  <div class="timeline-time">
-                    17:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>MAD</span>
-                    <h3>Aftensmad</h3>
-                    <p>
-                      Vi samles til aftensmad.
-                      Måltidet er inkluderet i din billet.
-                    </p>
-                  </div>
-                </article>
-
-
-                <!-- SIDSTE MØDE -->
-                <article class="timeline-event" data-start="2026-09-12T19:00" data-end="2026-09-12T21:00">
-                  <div class="timeline-time">
-                    19:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>AFSLUTNINGSMØDE</span>
-                    <h3>Session 4 · Mark Foster</h3>
-                    <p>
-                      Vi slutter MOVE af med en stærk aften
-                      sammen med Mark Foster.
-                      Kom med til lovsang, fællesskab og et budskab fra Gud.
-                    </p>
-                  </div>
-                </article>
-
-
-                <article class="timeline-event" data-start="2026-09-12T21:00" data-end="2026-09-12T22:00">
-                  <div class="timeline-time">
-                    21:00
-                  </div>
-
-                  <div class="timeline-dot"></div>
-
-                  <div class="timeline-card">
-                    <span>FÆLLESSKAB</span>
-                    <h3>Café Believe</h3>
-                    <p>
-                      Kom forbi til hygge, fællesskab og noget godt at spise.
-                      Caféen drives af Believe fra Kildevæld, som rejser ud for at dele Guds ord.
-                      Alt overskud går til deres rejse til Uganda.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </section>
-
-
-            <!-- SØNDAG -->
-            <section class="sunday" data-start="2026-09-13T10:30" data-end="2026-09-13T12:00">
-
-              <div class="sunday-heading">
-                <span>13. SEPTEMBER</span>
-                <h2>Søndag</h2>
-              </div>
-
-              <div class="sunday-card">
-
-                <div class="sunday-time">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    ANKOMST
+                  </span>
+
+                  <h3>
+                    Check-in
+                  </h3>
+
+                  <p>
+                    Velkommen til MOVE! Du kan checke ind
+                    ved Samværkets hovedindgang.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- OPENING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T19:00"
+                data-end="2026-09-11T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    ÅBNINGSMØDE
+                  </span>
+
+                  <h3>
+                    Session 1 · Mark Foster
+                  </h3>
+
+                  <p>
+                    Vi skyder MOVE i gang med et brag,
+                    når vores gæstetaler Mark Foster åbner konferencen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- CAFÉ -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T21:00"
+                data-end="2026-09-11T22:00"
+              >
+
+                <div class="timeline-time">
+                  21:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FÆLLESSKAB
+                  </span>
+
+                  <h3>
+                    Café
+                  </h3>
+
+                  <p>
+                    Kom forbi til hygge, fællesskab og noget godt at spise.
+                    Caféen drives af Believe fra Kildevæld, som rejser ud
+                    for at dele Guds ord.
+                    Alt overskud går til deres rejse til Uganda.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- LØRDAG -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                12. SEPTEMBER
+              </span>
+
+              <h2>
+                Lørdag
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- SESSION 2 -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T10:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    MØDE
+                  </span>
+
+                  <h3>
+                    Session 2 · Jesper Kure
+                  </h3>
+
+                  <p>
+                    Jesper Kure deler et budskab med fokus
+                    på tro, håb og et liv forvandlet af Gud.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- PAUSE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T10:30"
+                data-end="2026-09-12T11:00"
+              >
+
+                <div class="timeline-time">
                   10:30
                 </div>
 
-                <div class="sunday-content">
-                  <span>GUDSTJENESTE</span>
-                  <h3>Gudstjeneste</h3>
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    PAUSE
+                  </span>
+
+                  <h3>
+                    Kaffe & fællesskab
+                  </h3>
+
                   <p>
-                    Du er inviteret til gudstjeneste søndag kl. 10:30 i Kolding, Fredericia eller Haderslev.
+                    Tag en kop kaffe, find nogen at snakke med
+                    og nyd fællesskabet i caféen.
                   </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- SESSION 3 -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T11:00"
+                data-end="2026-09-12T12:00"
+              >
+
+                <div class="timeline-time">
+                  11:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    MØDE
+                  </span>
+
+                  <h3>
+                    Session 3 · Mark Foster
+                  </h3>
+
                   <p>
-                    Gudstjenesten er helt gratis og åben for alle – også hvis du ikke har købt billet til MOVE.
+                    Mark Foster deler et budskab,
+                    der inviterer os til at lade Gud
+                    forandre vores liv.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- FROKOST -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T12:00"
+                data-end="2026-09-12T12:30"
+              >
+
+                <div class="timeline-time">
+                  12:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    MAD
+                  </span>
+
+                  <h3>
+                    Frokost
+                  </h3>
+
+                  <p>
+                    Vi samles til frokost og godt fællesskab.
+                    Frokosten er inkluderet i din billet.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- Q&A -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T14:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Q&A
+                  </span>
+
+                  <h3>
+                    Q&A
+                  </h3>
+
+                  <p>
+                    Har du et spørgsmål?
+                    Her får du mulighed for at stille det og få svar.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- ELECTIVES -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T14:30"
+                data-end="2026-09-12T15:15"
+              >
+
+                <div class="timeline-time">
+                  14:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    AKTIVITET
+                  </span>
+
+                  <h3>
+                    Electives
+                  </h3>
+
+                  <p>
+                    Vælg mellem forskellige aktiviteter og sessions.
+                    Se mere om de forskellige muligheder nedenfor.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- KAFFE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T15:15"
+                data-end="2026-09-12T15:30"
+              >
+
+                <div class="timeline-time">
+                  15:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    PAUSE
+                  </span>
+
+                  <h3>
+                    Kaffe & fællesskab
+                  </h3>
+
+                  <p>
+                    Vi tager en lille pause med kaffe og tid
+                    til at hænge ud i caféen.
+                    Kaffen er inkluderet i billetten.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- AKTIVITETER -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T15:30"
+                data-end="2026-09-12T17:00"
+              >
+
+                <div class="timeline-time">
+                  15:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    AKTIVITETER
+                  </span>
+
+                  <h3>
+                    Eftermiddag med aktiviteter
+                  </h3>
+
+                  <p>
+                    Eftermiddagen er fyldt med hygge og fællesskab.
+                    Du kan vælge mellem flere forskellige aktiviteter:
+                  </p>
+
+                  <div class="activity-list">
+
+                    <div class="activity-item">
+                      <strong>
+                        🎲 Brætspil
+                      </strong>
+
+                      <span>
+                        Hygge og spil i caféen
+                      </span>
+                    </div>
+
+                    <div class="activity-item">
+                      <strong>
+                        🏆 Stigegolf & petanque
+                      </strong>
+
+                      <span>
+                        Aktiviteter udenfor foran Samværket
+                      </span>
+                    </div>
+
+                    <div class="activity-item">
+                      <strong>
+                        🚶 Gåtur
+                      </strong>
+
+                      <span>
+                        En hyggelig gåtur med afgang
+                        fra hovedindgangen
+                      </span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+
+              <!-- AFTENSMAD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T17:00"
+                data-end="2026-09-12T17:30"
+              >
+
+                <div class="timeline-time">
+                  17:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    MAD
+                  </span>
+
+                  <h3>
+                    Aftensmad
+                  </h3>
+
+                  <p>
+                    Vi samles til aftensmad.
+                    Måltidet er inkluderet i din billet.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- SIDSTE MØDE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:00"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    AFSLUTNINGSMØDE
+                  </span>
+
+                  <h3>
+                    Session 4 · Mark Foster
+                  </h3>
+
+                  <p>
+                    Vi slutter MOVE af med en stærk aften
+                    sammen med Mark Foster.
+                    Kom med til lovsang, fællesskab og et budskab fra Gud.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- CAFÉ BELIEVE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T21:00"
+                data-end="2026-09-12T22:00"
+              >
+
+                <div class="timeline-time">
+                  21:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FÆLLESSKAB
+                  </span>
+
+                  <h3>
+                    Café Believe
+                  </h3>
+
+                  <p>
+                    Kom forbi til hygge, fællesskab og noget godt at spise.
+                    Caféen drives af Believe fra Kildevæld, som rejser ud
+                    for at dele Guds ord.
+                    Alt overskud går til deres rejse til Uganda.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- SØNDAG -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                13. SEPTEMBER
+              </span>
+
+              <h2>
+                Søndag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  GUDSTJENESTE
+                </span>
+
+                <h3>
+                  Gudstjeneste
+                </h3>
+
+                <p>
+                  Du er inviteret til gudstjeneste søndag kl. 10:30
+                  i Kolding, Fredericia eller Haderslev.
+                </p>
+
+                <p>
+                  Gudstjenesten er helt gratis og åben for alle –
+                  også hvis du ikke har købt billet til MOVE.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+        </div>
+
+
+        <!-- ==================================================
+             MAXI MOVE
+        =================================================== -->
+
+        <div
+          class="program-view"
+          data-program="maxi"
+        >
+
+
+          <!-- FREDAG - KUN ÉT EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:15"
+            data-end="2026-09-11T21:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                11. SEPTEMBER
+              </span>
+
+              <h2>
+                Fredag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                19:15
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  Børnekirke-rummet
+                </span>
+
+                <h3>
+                  Aftenmøde
+                </h3>
+
+                <p>
+                  Efter de første to sange går vi til Børnekirke-rummet,
+                  hvor der venter fællesskab, aktiviteter og en fed aften
+                  sammen.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- LØRDAG -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                12. SEPTEMBER
+              </span>
+
+              <h2>
+                Lørdag
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- FORMIDDAG -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Børnekirke-rummet
+                  </span>
+
+                  <h3>
+                    Møde & aktiviteter
+                  </h3>
+
+                  <p>
+                    Vi samles i Børnekirke-rummet til en formiddag
+                    med aktiviteter, fællesskab og tid sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- EFTERMIDDAG -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T14:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Børnekirke-rummet
+                  </span>
+
+                  <h3>
+                    Aktiviteter
+                  </h3>
+
+                  <p>
+                    Vi fortsætter fællesskabet i Børnekirke-rummet
+                    med aktiviteter og tid sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- AFTEN -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:15"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Bålpladsen
+                  </span>
+
+                  <h3>
+                    Aftenprogram
+                  </h3>
+
+                  <p>
+                    Efter de første to sange kan du vælge mellem
+                    bålhygge eller at blive med til gudstjenesten.
                   </p>
                 </div>
-              </div>
-            </section>
-
-            <div class="program-download">
-              <h3>Gem programmet</h3>
-              <p>Du kan downloade programmet direkte på din tlf her</p>
-
-              <div class="program-download-buttons">
-                <button class="download-button save-program-button">
-                  📱 Gem programmet
-                </button>
-
-                <button class="download-button secondary download-pdf-button">
-                  📄 Download PDF
-                </button>
-              </div>
+              </article>
             </div>
-          </div>
-
-        <!-- TWEEN & BØRNEKIRKE -->
-        <div class="program-view" data-program="tween">
-          <section class="coming-soon">
-            <h2>Programmet kommer snart</h2>
-            <p>
-              Vi er stadig i gang med at planlægge programmet for Tween & børnekirke.
-              Glæd dig til en masse fede aktiviteter, fællesskab og oplevelser!
-            </p>
-
-            <p>
-              Vil du være blandt de første til at få besked, når programmet er klar?
-              Så tilmeld dig vores nyhedsmail.
-            </p>
-
-            <a data-link="newsletter" rel="noopener noreferrer" class="newsletter-button">
-              Tilmeld nyhedsmailen
-            </a>
           </section>
 
-          <div class="program-download">
-            <h3>Gem programmet</h3>
-            <p>Programmet er desværre ikke klar endnu. Du kan downloade det, når det er tilgængeligt.</p>
+          <!-- SØNDAG -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
 
-            <div class="program-download-buttons">
-              <button class="download-button save-program-button">
-                📱 Gem programmet
-              </button>
+            <div class="sunday-heading">
 
-              <button class="download-button secondary download-pdf-button">
-                📄 Download PDF
-              </button>
+              <span>
+                13. SEPTEMBER
+              </span>
+
+              <h2>
+                Søndag
+              </h2>
+
             </div>
-          </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  GUDSTJENESTE
+                </span>
+
+                <h3>
+                  Gudstjeneste
+                </h3>
+
+                <p>
+                  På søndag er der også børnekirke i Kolding, Fredericia og Haderslev!
+                  Her kan du være med til en sjov gudstjeneste sammen med andre børn,
+                  med fællesskab, aktiviteter og en masse godt at opleve.
+                </p>
+
+                <p>
+                  Børnekirken er helt gratis, og du er meget velkommen – også selvom
+                  du ikke har været med til MOVE.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- MINIKIRKE -->
-        <div class="program-view" data-program="mini">
-          <section class="coming-soon">
-            <h2>Programmet kommer snart</h2>
-            <p>
-              Vi er stadig i gang med at planlægge programmet for Minikirke.
-              Glæd dig til en masse fede aktiviteter, fællesskab og oplevelser!
-            </p>
 
-            <p>
-              Vil du være blandt de første til at få besked, når programmet er klar?
-              Så tilmeld dig vores nyhedsmail.
-            </p>
+        <!-- ==================================================
+             KIDS MOVE
+        =================================================== -->
 
-            <a data-link="newsletter" rel="noopener noreferrer" class="newsletter-button">
-              Tilmeld nyhedsmailen
-            </a>
+        <div
+          class="program-view"
+          data-program="kids"
+        >
+
+
+          <!-- FREDAG - KUN ÉT EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:15"
+            data-end="2026-09-11T21:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                11. SEPTEMBER
+              </span>
+
+              <h2>
+                Fredag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                19:15
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  Teen-rummet & lokale 1 på 1. sal
+                </span>
+
+                <h3>
+                  Møde & aktiviteter
+                </h3>
+
+                <p>
+                  Efter de første to sange går vi sammen til Teen-rummet
+                  og lokale 1 på 1. sal, hvor der venter sjove aktiviteter,
+                  fællesskab og en fed aften.
+                </p>
+
+              </div>
+
+            </div>
+
           </section>
 
-          <div class="program-download">
-            <h3>Gem programmet</h3>
-            <p>Programmet er desværre ikke klar endnu. Du kan downloade det, når det er tilgængeligt.</p>
 
-            <div class="program-download-buttons">
-              <button class="download-button save-program-button">
-                📱 Gem programmet
-              </button>
+          <!-- LØRDAG -->
+          <section class="program-day">
 
-              <button class="download-button secondary download-pdf-button">
-                📄 Download PDF
-              </button>
+            <div class="day-heading">
+
+              <span>
+                12. SEPTEMBER
+              </span>
+
+              <h2>
+                Lørdag
+              </h2>
+
             </div>
-          </div>
+
+
+            <div class="timeline">
+
+
+              <!-- FORMIDDAG -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Teen-rummet
+                  </span>
+
+                  <h3>
+                    Møde & aktiviteter
+                  </h3>
+
+                  <p>
+                    Vi mødes i Teen-rummet til en formiddag fyldt
+                    med sjov, aktiviteter og fællesskab.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- SKATEBOARD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T15:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Udenfor eller i hallen
+                  </span>
+
+                  <h3>
+                    Skateboard & aktiviteter
+                  </h3>
+
+                  <p>
+                    Vi tager skateboardene frem og kommer ud til en
+                    aktiv eftermiddag med fart, sjov og fællesskab.
+                    Vi er enten udenfor eller i hallen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- BÅL -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:15"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Bålpladsen
+                  </span>
+
+                  <h3>
+                    Bålhygge
+                  </h3>
+
+                  <p>
+                    Efter de første to sange samles vi til en hyggelig
+                    aften med bål, fællesskab og masser af gode oplevelser.
+                    Vi er enten udenfor eller i hallen.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- SØNDAG -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                13. SEPTEMBER
+              </span>
+
+              <h2>
+                Søndag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  GUDSTJENESTE
+                </span>
+
+                <h3>
+                  Gudstjeneste
+                </h3>
+
+                <p>
+                  På søndag er der også børnekirke i Kolding, Fredericia og Haderslev!
+                  Her kan du være med til en sjov gudstjeneste sammen med andre børn,
+                  med fællesskab, aktiviteter og en masse godt at opleve.
+                </p>
+
+                <p>
+                  Børnekirken er helt gratis, og du er meget velkommen – også selvom
+                  du ikke har været med til MOVE.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </main>
 
-    <button class="scroll-top" id="scrollTop" aria-label="Til toppen">
-      <svg viewBox="0 0 100 100">
-        <circle class="scroll-progress-bg" cx="50" cy="50" r="45"></circle>
-        <circle class="scroll-progress" cx="50" cy="50" r="45"></circle>
-      </svg>
 
-      <span class="scroll-arrow">↑</span>
-    </button>
+        <!-- ==================================================
+             MINI MOVE
+        =================================================== -->
 
-    <div id="footer"></div>
+        <div
+          class="program-view"
+          data-program="mini">
 
-    <div id="cookie-banner" class="cookie-banner">
-      <p>Vi bruger nødvendige cookies for at forbedre din oplevelse og sikre, at hjemmesiden fungerer korrekt.</p>
-      <div class="cookie-actions">
-        <button id="accept-cookies">OK</button>
-        <a href="https://kirkeibyen.dk/politik/cookiepolitik/" target="_blank" rel="noopener noreferrer" class="cookie-link">
-          Læs mere
-        </a>
+          <!-- FREDAG - KUN ÉT EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:00"
+            data-end="2026-09-11T21:00">
+
+            <div class="sunday-heading">
+
+              <span>
+                11. SEPTEMBER
+              </span>
+
+              <h2>
+                Fredag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                19:00
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  Familierummet
+                </span>
+
+                <h3>
+                  Livestream & hygge
+                </h3>
+
+                <p>
+                  Slå jer ned i familierummet og følg med via livestream,
+                  mens børnene kan lege og hygge sig i trygge omgivelser.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- LØRDAG -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                12. SEPTEMBER
+              </span>
+
+              <h2>
+                Lørdag
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- FORMIDDAG -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Familierummet
+                  </span>
+
+                  <h3>
+                    Leg & fællesskab
+                  </h3>
+
+                  <p>
+                    Mini MOVE er et hyggeligt fællesskab for de mindste.
+                    Vi samles i familierummet, hvor der er plads til leg,
+                    hygge og gode oplevelser sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LIVESTREAM -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:00"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Familierummet
+                  </span>
+
+                  <h3>
+                    Livestream & hygge
+                  </h3>
+
+                  <p>
+                    Slå jer ned i familierummet og følg med via livestream,
+                    mens børnene kan lege og hygge sig i trygge omgivelser.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- SØNDAG -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                13. SEPTEMBER
+              </span>
+
+              <h2>
+                Søndag
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  GUDSTJENESTE
+                </span>
+
+                <h3>
+                  Gudstjeneste
+                </h3>
+
+                <p>
+                  På søndag er der også børnekirke i Kolding, Fredericia og Haderslev!
+                  Her kan du være med til en sjov gudstjeneste sammen med andre børn,
+                  med fællesskab, aktiviteter og en masse godt at opleve.
+                </p>
+
+                <p>
+                  Børnekirken er helt gratis, og du er meget velkommen – også selvom
+                  du ikke har været med til MOVE.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
+    </section>
+  </main>
+
+
+  <!-- SCROLL TOP -->
+  <button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Til toppen"
+  >
+
+    <svg viewBox="0 0 100 100">
+
+      <circle
+        class="scroll-progress-bg"
+        cx="50"
+        cy="50"
+        r="45"
+      ></circle>
+
+      <circle
+        class="scroll-progress"
+        cx="50"
+        cy="50"
+        r="45"
+      ></circle>
+
+    </svg>
+
+    <span class="scroll-arrow">
+      ↑
+    </span>
+
+  </button>
+
+
+  <div id="footer"></div>
+
+
+  <!-- COOKIE -->
+  <div
+    id="cookie-banner"
+    class="cookie-banner"
+  >
+
+    <p>
+      Vi bruger nødvendige cookies for at forbedre din oplevelse
+      og sikre, at hjemmesiden fungerer korrekt.
+    </p>
+
+    <div class="cookie-actions">
+
+      <button id="accept-cookies">
+        OK
+      </button>
+
+      <a
+        href="https://kirkeibyen.dk/politik/cookiepolitik/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cookie-link"
+      >
+        Læs mere
+      </a>
+
     </div>
 
-    <script src="/assets/js/program.js"></script>
-    <script src="/assets/js/script.js"></script>
+  </div>
 
-  </body>
+
+  <script src="/assets/js/program.js"></script>
+  <script src="/assets/js/script.js"></script>
+
+</body>
 </html>

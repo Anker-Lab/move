@@ -1,103 +1,164 @@
-/* =========================
-    KNAPPER ØVERST
-========================= */
-const buttons = document.querySelectorAll(".knapper button");
-const programs = document.querySelectorAll(".program-view");
+/* =========================================
+   MOVE26 PROGRAM
+========================================= */
 
-buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        // Fjern active fra alle knapper
-        buttons.forEach(btn => {
-            btn.classList.remove("active");
+
+    /* =========================================
+       ELEMENTER
+    ========================================= */
+
+    const buttons = document.querySelectorAll(
+        ".knapper button[data-program]"
+    );
+
+    const programs = document.querySelectorAll(
+        ".program-view[data-program]"
+    );
+
+    const nowButton = document.getElementById(
+        "nowButton"
+    );
+
+
+    /* =========================================
+       SKIFT PROGRAM
+    ========================================= */
+
+    function switchProgram(programName) {
+
+        // Fjern aktiv status fra knapper
+        buttons.forEach(button => {
+
+            button.classList.remove("active");
+
         });
 
-        // Gør den valgte knap aktiv
-        button.classList.add("active");
 
         // Skjul alle programmer
         programs.forEach(program => {
+
             program.classList.remove("active");
+
         });
 
-        // Vis det program, der passer til knappen
-        programs[index].classList.add("active");
+
+        // Find knappen
+        const activeButton = document.querySelector(
+            `.knapper button[data-program="${programName}"]`
+        );
+
+
+        // Find programmet
+        const activeProgram = document.querySelector(
+            `.program-view[data-program="${programName}"]`
+        );
+
+
+        // Aktivér knap
+        if (activeButton) {
+
+            activeButton.classList.add("active");
+
+        }
+
+
+        // Vis program
+        if (activeProgram) {
+
+            activeProgram.classList.add("active");
+
+        }
+
+    }
+
+
+    /* =========================================
+       KNAPPER
+    ========================================= */
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const programName = button.dataset.program;
+
+            switchProgram(programName);
+
+        });
+
     });
-});
 
 
-/* =========================
-   PROGRAMMET
-========================= */
-document.addEventListener("DOMContentLoaded", () => {
+    /* =========================================
+       FIND EVENTS
+    ========================================= */
 
-    const events = [
-    ...document.querySelectorAll(".timeline-event[data-start][data-end]"),
-    ...document.querySelectorAll(".sunday[data-start][data-end]")
-];
+    function getEvents(program = null) {
 
-    const nowButton = document.getElementById("nowButton");
+        // Hvis vi sender et program med
+        if (program) {
 
-    if (!events.length) return;
+            return [
+                ...program.querySelectorAll(
+                    ".timeline-event[data-start][data-end], " +
+                    ".single-event[data-start][data-end]"
+                )
+            ];
+
+        }
 
 
-    // --------------------------------------------------
-    // FIND AKTIVE EVENTS
-    // --------------------------------------------------
+        // Alle events på hele siden
+        return [
+            ...document.querySelectorAll(
+                ".timeline-event[data-start][data-end], " +
+                ".single-event[data-start][data-end]"
+            )
+        ];
 
-    function getActiveEvents() {
-
-        const now = new Date();
-
-        return events.filter(event => {
-
-            const start = new Date(event.dataset.start);
-            const end = new Date(event.dataset.end);
-
-            return now >= start && now < end;
-        });
     }
 
 
-    // --------------------------------------------------
-    // FIND NÆSTE EVENT
-    // --------------------------------------------------
+    /* =========================================
+       OPDATER EVENTS
+    ========================================= */
 
-    function getNextEvent() {
-
-        const now = new Date();
-
-        return events.find(event => {
-            const start = new Date(event.dataset.start);
-
-            return start > now;
-        });
-    }
-
-
-    // --------------------------------------------------
-    // OPDATER PROGRAMMET
-    // --------------------------------------------------
-
-    function updateProgram() {
+    function updateEvents() {
 
         const now = new Date();
+
+        const events = getEvents();
+
 
         events.forEach(event => {
 
-            const start = new Date(event.dataset.start);
-            const end = new Date(event.dataset.end);
+            const start = new Date(
+                event.dataset.start
+            );
 
-            event.classList.remove("current", "past");
+            const end = new Date(
+                event.dataset.end
+            );
 
-            // Aktiv lige nu
+
+            // Fjern tidligere status
+            event.classList.remove(
+                "current",
+                "past"
+            );
+
+
+            // Event foregår lige nu
             if (now >= start && now < end) {
 
                 event.classList.add("current");
 
             }
 
-            // Afsluttet
+
+            // Event er afsluttet
             else if (now >= end) {
 
                 event.classList.add("past");
@@ -106,273 +167,204 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-        return getActiveEvents();
     }
 
 
-    // --------------------------------------------------
-    // FIND HVAD "NU" SKAL GÅ TIL
-    // --------------------------------------------------
+    /* =========================================
+       AKTIVE EVENTS
+    ========================================= */
+
+    function getActiveEvents(events) {
+
+        const now = new Date();
+
+
+        return events.filter(event => {
+
+            const start = new Date(
+                event.dataset.start
+            );
+
+            const end = new Date(
+                event.dataset.end
+            );
+
+
+            return now >= start && now < end;
+
+        });
+
+    }
+
+
+    /* =========================================
+       NÆSTE EVENT
+    ========================================= */
+
+    function getNextEvent(events) {
+
+        const now = new Date();
+
+
+        return events.find(event => {
+
+            const start = new Date(
+                event.dataset.start
+            );
+
+
+            return start > now;
+
+        });
+
+    }
+
+
+    /* =========================================
+       FIND EVENT TIL "NU"
+    ========================================= */
 
     function getEventForNow() {
 
-        const activeEvents = getActiveEvents();
+        // Find aktivt program
+        const activeProgram = document.querySelector(
+            ".program-view.active"
+        );
 
-        // Hvis der er flere aktive,
-        // vælger vi den øverste i HTML'en.
-        if (activeEvents.length > 0) {
-            return activeEvents[0];
+
+        if (!activeProgram) {
+
+            return null;
+
         }
 
 
-        // Hvis der ikke er noget aktivt endnu,
-        // finder vi det næste kommende punkt.
-        const nextEvent = getNextEvent();
+        // Events KUN i det aktive program
+        const events = getEvents(activeProgram);
+
+
+        if (!events.length) {
+
+            return null;
+
+        }
+
+
+        // Find aktive events
+        const activeEvents = getActiveEvents(events);
+
+
+        // Hvis noget sker nu
+        if (activeEvents.length) {
+
+            return activeEvents[0];
+
+        }
+
+
+        // Find næste event
+        const nextEvent = getNextEvent(events);
+
 
         if (nextEvent) {
+
             return nextEvent;
+
         }
 
 
-        // Hvis hele programmet er overstået,
-        // går vi til det sidste punkt.
-        return events[events.length - 1];
+        // Hvis alt er slut
+        return events[
+            events.length - 1
+        ];
+
     }
 
 
-    // --------------------------------------------------
-    // SCROLL TIL "NU"
-    // --------------------------------------------------
+    /* =========================================
+       SCROLL TIL NU
+    ========================================= */
 
     function scrollToNow() {
 
-        updateProgram();
+        updateEvents();
+
 
         const targetEvent = getEventForNow();
 
-        if (!targetEvent) return;
+
+        if (!targetEvent) {
+
+            return;
+
+        }
 
 
+        // Scroll
         targetEvent.scrollIntoView({
+
             behavior: "smooth",
             block: "center"
+
         });
 
 
-        // Lille animation så man kan se,
-        // hvilket punkt vi hoppede til.
+        // Animation
+        targetEvent.classList.remove(
+            "focus"
+        );
 
-        targetEvent.classList.remove("focus");
 
+        // Genstart animation
         void targetEvent.offsetWidth;
 
-        targetEvent.classList.add("focus");
+
+        targetEvent.classList.add(
+            "focus"
+        );
 
 
         setTimeout(() => {
-            targetEvent.classList.remove("focus");
+
+            targetEvent.classList.remove(
+                "focus"
+            );
+
         }, 900);
+
     }
 
 
-    // --------------------------------------------------
-    // NU-KNAP
-    // --------------------------------------------------
+    /* =========================================
+       NU-KNAP
+    ========================================= */
 
     if (nowButton) {
 
-        nowButton.addEventListener("click", () => {
-            scrollToNow();
-        });
+        nowButton.addEventListener(
+            "click",
+            scrollToNow
+        );
 
     }
 
 
-// --------------------------------------------------
-// START
-// --------------------------------------------------
+    /* =========================================
+       START
+    ========================================= */
 
-updateProgram();
-
-
-// Automatisk scroll ved indlæsning
-setTimeout(() => {
-
-    const activeEvents = getActiveEvents();
-
-    // Hvis der ikke er noget aktivt,
-    // bliver vi bare øverst på siden.
-    if (activeEvents.length === 0) {
-        return;
-    }
-
-    // Første aktive event = øverste aktive
-    const targetEvent = activeEvents[0];
-
-    targetEvent.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-}, 500);
+    updateEvents();
 
 
-const sunday = document.querySelector(".sunday[data-start][data-end]");
-
-function updateSunday() {
-    if (!sunday) return;
-
-    const now = new Date();
-
-    const start = new Date(sunday.dataset.start);
-    const end = new Date(sunday.dataset.end);
-
-    if (now >= start && now < end) {
-        sunday.classList.add("current");
-    } else {
-        sunday.classList.remove("current");
-    }
-}
-
-
-    // --------------------------------------------------
-    // OPDATER LIVE
-    // --------------------------------------------------
+    /* =========================================
+       OPDATER HVER 10. SEKUND
+    ========================================= */
 
     setInterval(() => {
-        updateProgram();
-        updateSunday();
+
+        updateEvents();
+
     }, 10000);
 
-});
-
-
-// --------------------------------------------------
-// DOWNLOAD PROGRAM
-// --------------------------------------------------
-
-const PROGRAM_FILES = {
-    voksen: {
-        image: "/assets/images/program/9e6ea793-0713-496b-9c96-abdb03fbc521.jpeg",
-        pdf: "/assets/images/program/9e6ea793-0713-496b-9c96-abdb03fbc521.pdf"
-    },
-
-    tween: {
-        image: null,
-        pdf: null
-    },
-
-    mini: {
-        image: null,
-        pdf: null
-    }
-};
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    document.querySelectorAll(".program-view").forEach(programView => {
-
-        const programType = programView.dataset.program;
-        const files = PROGRAM_FILES[programType];
-
-        if (!files) return;
-
-        const saveButton = programView.querySelector(".save-program-button");
-        const pdfButton = programView.querySelector(".download-pdf-button");
-
-
-        // --------------------------------------------------
-        // GEM PROGRAM
-        // --------------------------------------------------
-
-        if (!files.image) {
-
-            saveButton.disabled = true;
-
-        } else {
-
-            saveButton.addEventListener("click", async () => {
-
-                try {
-
-                    const response = await fetch(files.image);
-                    const blob = await response.blob();
-
-                    const file = new File(
-                        [blob],
-                        "MOVE26-program.jpeg",
-                        {
-                            type: "image/jpeg"
-                        }
-                    );
-
-
-                    // Hvis telefonen understøtter deling af filer
-                    if (
-                        navigator.share &&
-                        navigator.canShare &&
-                        navigator.canShare({
-                            files: [file]
-                        })
-                    ) {
-
-                        await navigator.share({
-                            files: [file],
-                            title: "MOVE26 program",
-                            text: "MOVE26 program"
-                        });
-
-                    } else {
-
-                        // Desktop / browser uden Share API
-                        const url = URL.createObjectURL(blob);
-
-                        const link = document.createElement("a");
-                        link.href = url;
-                        link.download = "MOVE26-program.jpeg";
-
-                        document.body.appendChild(link);
-                        link.click();
-                        link.remove();
-
-                        setTimeout(() => {
-                            URL.revokeObjectURL(url);
-                        }, 1000);
-                    }
-
-                } catch (error) {
-
-                    console.error(
-                        "Kunne ikke gemme programmet:",
-                        error
-                    );
-
-                }
-
-            });
-
-        }
-
-
-        // --------------------------------------------------
-        // DOWNLOAD PDF
-        // --------------------------------------------------
-
-        if (!files.pdf) {
-
-            pdfButton.disabled = true;
-
-        } else {
-
-            pdfButton.addEventListener("click", () => {
-
-                window.open(files.pdf, "_blank");
-
-            });
-
-        }
-
-    });
 
 });

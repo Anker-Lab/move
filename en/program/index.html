@@ -5,516 +5,1551 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Program - MOVE | Kirkeibyen</title>
-  <meta name="description" content="Information about MOVE - Kirkeibyen's annual conference">
+  <meta
+    name="description"
+    content="Information about MOVE - Kirkeibyen's annual conference"
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/logo/favicon/kib_logo_ikon_white_.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <link rel="apple-touch-icon" href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/logo/favicon/kib_logo_ikon_white_.png" type="image/png">
+  <link
+    rel="icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg"
+    type="image/svg+xml"
+  >
 
-  <link rel="stylesheet" href="/assets/css/general/style.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/layout.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/header.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/general/footer.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=040926">
-  <link rel="stylesheet" href="/assets/css/sites/program.css?v=040926">
+  <link
+    rel="icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_.png"
+    type="image/png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_crop.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="/assets/logo/favicon/kib_logo_ikon_white_.png"
+    type="image/png"
+  >
+
+  <link rel="stylesheet" href="/assets/css/general/style.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/layout.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/header.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/general/footer.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=080926">
+  <link rel="stylesheet" href="/assets/css/sites/program.css?v=080926">
 </head>
 
+
 <body class="black-header">
+
   <div id="header"></div>
-    <main>
-      <section class="hero hero-program">
-        <div class="hero-overlay">
-          <div class="container">
-            <h1>Program</h1>
-          </div>
-        </div>
-      </section>
-      <section class="program-section">
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero-program">
+
+      <div class="hero-overlay">
+
         <div class="container">
-
-```
-      <!-- TOP -->
-      <div class="program-top">
-        <div>
-          <span class="program-eyebrow">MOVE26</span>
           <h1>Program</h1>
-          <p>Here you can see the program for MOVE.</p>
         </div>
 
-        <button class="now-button" id="nowButton">
-            Now
-        </button>
       </div>
 
-      <!-- PROGRAM SELECTOR -->
-      <div class="knapper">
-        <button class="active">Adults</button>
-        <button>Tweens & Children's Church</button>
-        <button>Mini Church</button>
-      </div>
+    </section>
 
-      <!-- ADULT PROGRAM -->
-      <div class="program-view active" data-program="voksen">
 
-        <!-- PARENT ROOM -->
-        <section class="parent-room">
-            <div class="parent-room-content">
-                <span>FOR FAMILIES</span>
-                <h2>For the little ones</h2>
-                <p>
-                    If your child is too young for Mini Church,
-                    you are very welcome to stay in the café.
-                    There are toys and a TV, so you can be with your child
-                    while still following the program.
-                </p>
-            </div>
-        </section>
+    <!-- PROGRAM -->
+    <section class="program-section">
 
-        <!-- FRIDAY -->
-        <section class="program-day">
-          <div class="day-heading">
-            <span>SEPTEMBER 11</span>
-            <h2>Friday</h2>
+      <div class="container">
+
+
+        <!-- TOP -->
+        <div class="program-top">
+
+          <div>
+
+            <span class="program-eyebrow">
+              MOVE26
+            </span>
+
+            <h1>
+              Program
+            </h1>
+
+            <p>
+              Here you can see the program for MOVE.
+            </p>
+
           </div>
 
-          <div class="timeline">
 
-            <article class="timeline-event" data-start="2026-09-11T18:00" data-end="2026-09-11T19:00">
-              <div class="timeline-time">
-                18:00
-              </div>
+          <button
+            class="now-button"
+            id="nowButton"
+          >
+            Now
+          </button>
 
-              <div class="timeline-dot"></div>
+        </div>
+
+
+        <!-- PROGRAM SELECTOR -->
+        <div class="knapper">
+
+          <button data-program="mini">
+            MINI MOVE<br>
+            3 - 5 years
+          </button>
+
+          <button data-program="kids">
+            KIDS MOVE<br>
+            5 - 10 years
+          </button>
+
+          <button data-program="maxi">
+            MAXI MOVE<br>
+            11 - 13 years
+          </button>
+
+          <button
+            class="active"
+            data-program="voksen"
+          >
+            ADULTS
+          </button>
+
+        </div>
+
+
+        <!-- ==================================================
+             ADULT PROGRAM
+        =================================================== -->
+
+        <div
+          class="program-view active"
+          data-program="voksen"
+        >
+
+
+          <!-- PARENTS' ROOM -->
+          <section class="parent-room">
+
+            <div class="parent-room-content">
+
+              <span>
+                FOR FAMILIES
+              </span>
+
+              <h2>
+                For the little ones
+              </h2>
+
+              <p>
+                If your child is too young for Mini Church,
+                you are very welcome to stay in the café.
+                There are toys and a TV, so you can spend time
+                with your child while still following the program.
+              </p>
+
+            </div>
+
+          </section>
+
+
+          <!-- FRIDAY -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                SEPTEMBER 11
+              </span>
+
+              <h2>
+                Friday
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- CHECK-IN -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T18:00"
+                data-end="2026-09-11T19:00"
+              >
+
+                <div class="timeline-time">
+                  18:00
+                </div>
+
+                <div class="timeline-dot"></div>
 
                 <div class="timeline-card">
-                  <span>ARRIVAL</span>
-                  <h3>Check-in</h3>
+
+                  <span>
+                    ARRIVAL
+                  </span>
+
+                  <h3>
+                    Check-in
+                  </h3>
+
                   <p>
                     Welcome to MOVE! You can check in
                     at the main entrance of Samværket.
                   </p>
+
                 </div>
-            </article>
+
+              </article>
 
 
-            <article class="timeline-event" data-start="2026-09-11T19:00" data-end="2026-09-11T21:00">
-              <div class="timeline-time">
-                19:00
-              </div>
+              <!-- OPENING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T19:00"
+                data-end="2026-09-11T21:00"
+              >
 
-              <div class="timeline-dot"></div>
+                <div class="timeline-time">
+                  19:00
+                </div>
 
-              <div class="timeline-card">
-                <span>OPENING MEETING</span>
-                <h3>Session 1 · Mark Foster</h3>
-                <p>
-                  We kick off MOVE with a bang
-                  as our guest speaker Mark Foster opens the conference.
-                </p>
-              </div>
-            </article>
+                <div class="timeline-dot"></div>
 
+                <div class="timeline-card">
 
-            <article class="timeline-event" data-start="2026-09-11T21:00" data-end="2026-09-11T22:00">
-              <div class="timeline-time">
-                21:00
-              </div>
+                  <span>
+                    OPENING SESSION
+                  </span>
 
-              <div class="timeline-dot"></div>
+                  <h3>
+                    Session 1 · Mark Foster
+                  </h3>
 
-              <div class="timeline-card">
-                <span>COMMUNITY</span>
-                <h3>Café</h3>
-                <p>
-                  Come by for a cozy time, community and something good to eat.
-                  The café is run by Believe from Kildevæld, who are traveling
-                  to share the Word of God.
-                  All profits go towards their trip to Uganda.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
+                  <p>
+                    We kick off MOVE with a bang as our guest speaker,
+                    Mark Foster, opens the conference.
+                  </p>
+
+                </div>
+
+              </article>
 
 
-        <!-- SATURDAY -->
-        <section class="program-day">
+              <!-- CAFÉ -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T21:00"
+                data-end="2026-09-11T22:00"
+              >
 
-          <div class="day-heading">
-            <span>SEPTEMBER 12</span>
-            <h2>Saturday</h2>
-          </div>
+                <div class="timeline-time">
+                  21:00
+                </div>
 
-          <div class="timeline">
+                <div class="timeline-dot"></div>
 
-            <article class="timeline-event" data-start="2026-09-12T09:30" data-end="2026-09-12T10:30">
-              <div class="timeline-time">
-                09:30
-              </div>
+                <div class="timeline-card">
 
-              <div class="timeline-dot"></div>
+                  <span>
+                    COMMUNITY
+                  </span>
 
-              <div class="timeline-card">
-                <span>MEETING</span>
-                <h3>Session 2 · Jesper Kure</h3>
-                <p>
-                  Jesper Kure will share a message focusing
-                  on faith, hope and a life transformed by God.
-                </p>
-              </div>
-            </article>
+                  <h3>
+                    Café
+                  </h3>
+
+                  <p>
+                    Come by for a relaxed evening, community
+                    and something good to eat.
+                    The café is run by Believe from Kildevæld,
+                    who are going abroad to share the Word of God.
+                    All profits go towards their trip to Uganda.
+                  </p>
+
+                </div>
+
+              </article>
 
 
-            <article class="timeline-event" data-start="2026-09-12T10:30" data-end="2026-09-12T11:00">
-              <div class="timeline-time">
+            </div>
+
+          </section>
+
+
+          <!-- SATURDAY -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                SEPTEMBER 12
+              </span>
+
+              <h2>
+                Saturday
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- SESSION 2 -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T10:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    SESSION
+                  </span>
+
+                  <h3>
+                    Session 2 · Jesper Kure
+                  </h3>
+
+                  <p>
+                    Jesper Kure shares a message focusing on
+                    faith, hope and a life transformed by God.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- BREAK -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T10:30"
+                data-end="2026-09-12T11:00"
+              >
+
+                <div class="timeline-time">
+                  10:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    BREAK
+                  </span>
+
+                  <h3>
+                    Coffee & Community
+                  </h3>
+
+                  <p>
+                    Grab a cup of coffee, find someone to talk to
+                    and enjoy the community in the café.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- SESSION 3 -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T11:00"
+                data-end="2026-09-12T12:00"
+              >
+
+                <div class="timeline-time">
+                  11:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    SESSION
+                  </span>
+
+                  <h3>
+                    Session 3 · Mark Foster
+                  </h3>
+
+                  <p>
+                    Mark Foster shares a message inviting us
+                    to let God transform our lives.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LUNCH -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T12:00"
+                data-end="2026-09-12T12:30"
+              >
+
+                <div class="timeline-time">
+                  12:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FOOD
+                  </span>
+
+                  <h3>
+                    Lunch
+                  </h3>
+
+                  <p>
+                    We gather for lunch and good fellowship.
+                    Lunch is included in your ticket.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- Q&A -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T14:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Q&A
+                  </span>
+
+                  <h3>
+                    Q&A
+                  </h3>
+
+                  <p>
+                    Do you have a question?
+                    This is your opportunity to ask and get an answer.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- ELECTIVES -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T14:30"
+                data-end="2026-09-12T15:15"
+              >
+
+                <div class="timeline-time">
+                  14:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    ACTIVITY
+                  </span>
+
+                  <h3>
+                    Electives
+                  </h3>
+
+                  <p>
+                    Choose between different activities and sessions.
+                    See more about the different options below.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- COFFEE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T15:15"
+                data-end="2026-09-12T15:30"
+              >
+
+                <div class="timeline-time">
+                  15:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    BREAK
+                  </span>
+
+                  <h3>
+                    Coffee & Community
+                  </h3>
+
+                  <p>
+                    Take a short break with coffee and time
+                    to hang out in the café.
+                    Coffee is included in the ticket.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- ACTIVITIES -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T15:30"
+                data-end="2026-09-12T17:00"
+              >
+
+                <div class="timeline-time">
+                  15:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    ACTIVITIES
+                  </span>
+
+                  <h3>
+                    Afternoon Activities
+                  </h3>
+
+                  <p>
+                    The afternoon is filled with fun and community.
+                    You can choose between several different activities:
+                  </p>
+
+                  <div class="activity-list">
+
+                    <div class="activity-item">
+
+                      <strong>
+                        🎲 Board Games
+                      </strong>
+
+                      <span>
+                        Games and fun in the café
+                      </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                      <strong>
+                        🏆 Ladder Golf & Petanque
+                      </strong>
+
+                      <span>
+                        Outdoor activities in front of Samværket
+                      </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                      <strong>
+                        🚶 Walk
+                      </strong>
+
+                      <span>
+                        A relaxing walk departing from the main entrance
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+
+              <!-- DINNER -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T17:00"
+                data-end="2026-09-12T17:30"
+              >
+
+                <div class="timeline-time">
+                  17:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FOOD
+                  </span>
+
+                  <h3>
+                    Dinner
+                  </h3>
+
+                  <p>
+                    We gather for dinner.
+                    The meal is included in your ticket.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- FINAL SESSION -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:00"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    CLOSING SESSION
+                  </span>
+
+                  <h3>
+                    Session 4 · Mark Foster
+                  </h3>
+
+                  <p>
+                    We close MOVE with a powerful evening
+                    together with Mark Foster.
+                    Join us for worship, community and a message from God.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- CAFÉ BELIEVE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T21:00"
+                data-end="2026-09-12T22:00"
+              >
+
+                <div class="timeline-time">
+                  21:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    COMMUNITY
+                  </span>
+
+                  <h3>
+                    Café Believe
+                  </h3>
+
+                  <p>
+                    Come by for a relaxed evening, community
+                    and something good to eat.
+                    The café is run by Believe from Kildevæld,
+                    who are going abroad to share the Word of God.
+                    All profits go towards their trip to Uganda.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- SUNDAY -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 13
+              </span>
+
+              <h2>
+                Sunday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
                 10:30
               </div>
 
-              <div class="timeline-dot"></div>
+              <div class="single-event-content">
 
-              <div class="timeline-card">
-                <span>BREAK</span>
-                <h3>Coffee & Community</h3>
-                <p>
-                  Grab a cup of coffee, find someone to talk to
-                  and enjoy the community in the café.
-                </p>
-              </div>
-            </article>
+                <span>
+                  CHURCH SERVICE
+                </span>
 
-
-            <article class="timeline-event" data-start="2026-09-12T11:00" data-end="2026-09-12T12:00">
-              <div class="timeline-time">
-                11:00
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>MEETING</span>
-                <h3>Session 3 · Mark Foster</h3>
-                <p>
-                  Mark Foster will share a
-                  message inviting us to let God
-                  transform our lives.
-                </p>
-              </div>
-            </article>
-
-
-            <article class="timeline-event" data-start="2026-09-12T12:00" data-end="2026-09-12T12:30">
-              <div class="timeline-time">
-                12:00
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>FOOD</span>
-                <h3>Lunch</h3>
-                <p>
-                  We gather for lunch and good fellowship.
-                  Lunch is included in your ticket.
-                </p>
-              </div>
-            </article>
-
-
-            <article class="timeline-event" data-start="2026-09-12T13:30" data-end="2026-09-12T14:30">
-              <div class="timeline-time">
-                13:30
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>Q&A</span>
-                <h3>Q&A</h3>
-                <p>
-                  Do you have a question?
-                  Here you will have the opportunity to ask it and get an answer.
-                </p>
-              </div>
-            </article>
-
-
-            <article class="timeline-event" data-start="2026-09-12T14:30" data-end="2026-09-12T15:15">
-              <div class="timeline-time">
-                14:30
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>ACTIVITY</span>
-                <h3>Electives</h3>
-                <p>
-                  Choose between different activities and sessions.
-                  See more about the different options below.
-                </p>
-              </div>
-            </article>
-
-
-            <article class="timeline-event" data-start="2026-09-12T15:15" data-end="2026-09-12T15:30">
-              <div class="timeline-time">
-                15:15
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>BREAK</span>
-                <h3>Coffee & Community</h3>
-                <p>
-                  Take a short break with coffee and time
-                  to hang out in the café. Coffee is included in the ticket.
-                </p>
-              </div>
-            </article>
-
-
-            <article class="timeline-event" data-start="2026-09-12T15:30" data-end="2026-09-12T17:00">
-              <div class="timeline-time">
-                15:30
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>ACTIVITIES</span>
-                <h3>Afternoon Activities</h3>
+                <h3>
+                  Church Service
+                </h3>
 
                 <p>
-                  Spend the afternoon enjoying activities,
-                  community and a relaxed atmosphere.
-                  Choose between several different activities:
+                  You are invited to a church service on Sunday at 10:30
+                  in Kolding, Fredericia or Haderslev.
                 </p>
 
-                <div class="activity-list">
-                  <div class="activity-item">
-                    <strong>🎲 Board Games</strong>
-                    <span>Games and fun in the café</span>
-                  </div>
+                <p>
+                  The church service is completely free and open to everyone –
+                  even if you have not purchased a ticket for MOVE.
+                </p>
 
-                  <div class="activity-item">
-                    <strong>🏆 Ladder Golf & Pétanque</strong>
-                    <span>Outdoor activities in front of Samværket</span>
-                  </div>
+              </div>
 
-                  <div class="activity-item">
-                    <strong>🚶 Walk</strong>
-                    <span>A relaxing walk starting at the main entrance</span>
-                  </div>
+            </div>
+
+          </section>
+
+
+        </div>
+
+
+        <!-- ==================================================
+             MAXI MOVE
+        =================================================== -->
+
+        <div
+          class="program-view"
+          data-program="maxi"
+        >
+
+
+          <!-- FRIDAY - ONE EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:15"
+            data-end="2026-09-11T21:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 11
+              </span>
+
+              <h2>
+                Friday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                19:15
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  CHILDREN'S CHURCH ROOM
+                </span>
+
+                <h3>
+                  Evening Session
+                </h3>
+
+                <p>
+                  After the first two songs, we will head to the
+                  Children's Church Room, where there will be
+                  community, activities and a great evening together.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- SATURDAY -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                SEPTEMBER 12
+              </span>
+
+              <h2>
+                Saturday
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- MORNING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
                 </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    CHILDREN'S CHURCH ROOM
+                  </span>
+
+                  <h3>
+                    Session & Activities
+                  </h3>
+
+                  <p>
+                    We gather in the Children's Church Room for a morning
+                    filled with activities, community and time together.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- AFTERNOON -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T14:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    CHILDREN'S CHURCH ROOM
+                  </span>
+
+                  <h3>
+                    Activities
+                  </h3>
+
+                  <p>
+                    We continue the community in the Children's Church Room
+                    with activities and time together.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- EVENING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:15"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    BONFIRE AREA
+                  </span>
+
+                  <h3>
+                    Evening Program
+                  </h3>
+
+                  <p>
+                    After the first two songs, you can choose between
+                    hanging out by the bonfire or staying for the church service.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- SUNDAY -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 13
+              </span>
+
+              <h2>
+                Sunday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
               </div>
-            </article>
 
+              <div class="single-event-content">
 
-            <article class="timeline-event" data-start="2026-09-12T17:00" data-end="2026-09-12T17:30">
-              <div class="timeline-time">
-                17:00
-              </div>
+                <span>
+                  CHURCH SERVICE
+                </span>
 
-              <div class="timeline-dot"></div>
+                <h3>
+                  Church Service
+                </h3>
 
-              <div class="timeline-card">
-                <span>FOOD</span>
-                <h3>Dinner</h3>
                 <p>
-                  We gather for dinner.
-                  The meal is included in your ticket.
+                  There is also a children's church service on Sunday
+                  in Kolding, Fredericia and Haderslev!
+                  You can join a fun service together with other children,
+                  with community, activities and lots of great things to experience.
                 </p>
+
+                <p>
+                  The children's church service is completely free,
+                  and you are very welcome – even if you have not been to MOVE.
+                </p>
+
               </div>
-            </article>
+
+            </div>
+
+          </section>
 
 
-            <!-- FINAL MEETING -->
-            <article class="timeline-event" data-start="2026-09-12T19:00" data-end="2026-09-12T21:00">
-              <div class="timeline-time">
+        </div>
+
+
+        <!-- ==================================================
+             KIDS MOVE
+        =================================================== -->
+
+        <div
+          class="program-view"
+          data-program="kids"
+        >
+
+
+          <!-- FRIDAY - ONE EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:15"
+            data-end="2026-09-11T21:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 11
+              </span>
+
+              <h2>
+                Friday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                19:15
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  TEEN ROOM & ROOM 1 ON THE FIRST FLOOR
+                </span>
+
+                <h3>
+                  Session & Activities
+                </h3>
+
+                <p>
+                  After the first two songs, we will head together to
+                  the Teen Room and Room 1 on the first floor,
+                  where there will be fun activities,
+                  community and a great evening.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- SATURDAY -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                SEPTEMBER 12
+              </span>
+
+              <h2>
+                Saturday
+              </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+              <!-- MORNING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    TEEN ROOM
+                  </span>
+
+                  <h3>
+                    Session & Activities
+                  </h3>
+
+                  <p>
+                    We meet in the Teen Room for a morning
+                    filled with fun, activities and community.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- SKATEBOARD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:30"
+                data-end="2026-09-12T15:30"
+              >
+
+                <div class="timeline-time">
+                  13:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    OUTSIDE OR IN THE HALL
+                  </span>
+
+                  <h3>
+                    Skateboarding & Activities
+                  </h3>
+
+                  <p>
+                    We bring out the skateboards and head into an
+                    active afternoon filled with speed, fun and community.
+                    We will either be outside or in the hall.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- BONFIRE -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:15"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    BONFIRE AREA
+                  </span>
+
+                  <h3>
+                    Bonfire Evening
+                  </h3>
+
+                  <p>
+                    After the first two songs, we gather for a cozy
+                    evening with a bonfire, community and lots of great experiences.
+                    We will either be outside or in the hall.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- SUNDAY -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 13
+              </span>
+
+              <h2>
+                Sunday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  CHURCH SERVICE
+                </span>
+
+                <h3>
+                  Church Service
+                </h3>
+
+                <p>
+                  There is also a children's church service on Sunday
+                  in Kolding, Fredericia and Haderslev!
+                  You can join a fun service together with other children,
+                  with community, activities and lots of great things to experience.
+                </p>
+
+                <p>
+                  The children's church service is completely free,
+                  and you are very welcome – even if you have not been to MOVE.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+        </div>
+
+
+        <!-- ==================================================
+             MINI MOVE
+        =================================================== -->
+
+        <div
+          class="program-view"
+          data-program="mini"
+        >
+
+
+          <!-- FRIDAY - ONE EVENT -->
+          <section
+            class="single-event"
+            data-start="2026-09-11T19:00"
+            data-end="2026-09-11T21:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 11
+              </span>
+
+              <h2>
+                Friday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
                 19:00
               </div>
 
-              <div class="timeline-dot"></div>
+              <div class="single-event-content">
 
-              <div class="timeline-card">
-                <span>CLOSING MEETING</span>
-                <h3>Session 4 · Mark Foster</h3>
+                <span>
+                  FAMILY ROOM
+                </span>
+
+                <h3>
+                  Livestream & Relaxation
+                </h3>
+
                 <p>
-                  We finish MOVE with a powerful evening
-                  together with Mark Foster.
-                  Join us for worship, community and a message from God.
+                  Settle down in the family room and follow the livestream
+                  while the children can play and enjoy a safe and comfortable environment.
                 </p>
-              </div>
-            </article>
 
-
-            <article class="timeline-event" data-start="2026-09-12T21:00" data-end="2026-09-12T22:00">
-              <div class="timeline-time">
-                21:00
               </div>
 
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <span>COMMUNITY</span>
-                <h3>Café Believe</h3>
-                <p>
-                  Come by for a cozy time, community and something good to eat.
-                  The café is run by Believe from Kildevæld, who are traveling
-                  to share the Word of God.
-                  All profits go towards their trip to Uganda.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-
-        <!-- SUNDAY -->
-        <section class="sunday" data-start="2026-09-13T10:30" data-end="2026-09-13T12:00">
-
-          <div class="sunday-heading">
-            <span>SEPTEMBER 13</span>
-            <h2>Sunday</h2>
-          </div>
-
-          <div class="sunday-card">
-
-            <div class="sunday-time">
-              10:30
             </div>
 
-            <div class="sunday-content">
-              <span>SERVICE</span>
-              <h3>Sunday Service</h3>
-              <p>
-                You are invited to a Sunday service at 10:30 AM in Kolding, Fredericia or Haderslev.
-              </p>
-              <p>
-                The service is completely free and open to everyone – even if you have not purchased a ticket for MOVE.
-              </p>
+          </section>
+
+
+          <!-- SATURDAY -->
+          <section class="program-day">
+
+            <div class="day-heading">
+
+              <span>
+                SEPTEMBER 12
+              </span>
+
+              <h2>
+                Saturday
+              </h2>
+
             </div>
-          </div>
-        </section>
 
-        <div class="program-download">
-          <h3>Save the program</h3>
-          <p>You can download the program directly to your phone here</p>
 
-          <div class="program-download-buttons">
-            <button class="download-button save-program-button">
-              📱 Save the program
-            </button>
+            <div class="timeline">
 
-            <button class="download-button secondary download-pdf-button">
-              📄 Download PDF
-            </button>
-          </div>
+
+              <!-- MORNING -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T09:30"
+                data-end="2026-09-12T11:30"
+              >
+
+                <div class="timeline-time">
+                  09:30
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FAMILY ROOM
+                  </span>
+
+                  <h3>
+                    Play & Community
+                  </h3>
+
+                  <p>
+                    Mini MOVE is a welcoming community for the little ones.
+                    We gather in the family room, where there is plenty of
+                    space for play, fun and great experiences together.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LIVESTREAM -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T19:00"
+                data-end="2026-09-12T21:00"
+              >
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    FAMILY ROOM
+                  </span>
+
+                  <h3>
+                    Livestream & Relaxation
+                  </h3>
+
+                  <p>
+                    Settle down in the family room and follow the livestream
+                    while the children can play and enjoy a safe and comfortable environment.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- SUNDAY -->
+          <section
+            class="single-event"
+            data-start="2026-09-13T10:30"
+            data-end="2026-09-13T12:00"
+          >
+
+            <div class="sunday-heading">
+
+              <span>
+                SEPTEMBER 13
+              </span>
+
+              <h2>
+                Sunday
+              </h2>
+
+            </div>
+
+
+            <div class="single-event-card">
+
+              <div class="single-event-time">
+                10:30
+              </div>
+
+              <div class="single-event-content">
+
+                <span>
+                  CHURCH SERVICE
+                </span>
+
+                <h3>
+                  Church Service
+                </h3>
+
+                <p>
+                  There is also a children's church service on Sunday
+                  in Kolding, Fredericia and Haderslev!
+                  You can join a fun service together with other children,
+                  with community, activities and lots of great things to experience.
+                </p>
+
+                <p>
+                  The children's church service is completely free,
+                  and you are very welcome – even if you have not been to MOVE.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
         </div>
+
       </div>
 
-    <!-- TWEENS & CHILDREN'S CHURCH -->
-    <div class="program-view" data-program="tween">
-      <section class="coming-soon">
-        <h2>The program is coming soon</h2>
-        <p>
-          We are still working on the program for Tweens & Children's Church.
-          Get ready for lots of great activities, community and experiences!
-        </p>
+    </section>
 
-        <p>
-          Would you like to be among the first to hear when the program is ready?
-          Sign up for our newsletter.
-        </p>
+  </main>
 
-        <a data-link="newsletter" rel="noopener noreferrer" class="newsletter-button">
-          Sign up for the newsletter
-        </a>
-      </section>
 
-      <div class="program-download">
-        <h3>Save the program</h3>
-        <p>The program is unfortunately not ready yet. You can download it when it becomes available.</p>
+  <!-- SCROLL TOP -->
+  <button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Back to top"
+  >
 
-        <div class="program-download-buttons">
-          <button class="download-button save-program-button">
-            📱 Save the program
-          </button>
+    <svg viewBox="0 0 100 100">
 
-          <button class="download-button secondary download-pdf-button">
-            📄 Download PDF
-          </button>
-        </div>
-      </div>
+      <circle
+        class="scroll-progress-bg"
+        cx="50"
+        cy="50"
+        r="45"
+      ></circle>
+
+      <circle
+        class="scroll-progress"
+        cx="50"
+        cy="50"
+        r="45"
+      ></circle>
+
+    </svg>
+
+    <span class="scroll-arrow">
+      ↑
+    </span>
+
+  </button>
+
+
+  <div id="footer"></div>
+
+
+  <!-- COOKIE -->
+  <div
+    id="cookie-banner"
+    class="cookie-banner"
+  >
+
+    <p>
+      We use necessary cookies to improve your experience
+      and ensure that the website functions correctly.
+    </p>
+
+    <div class="cookie-actions">
+
+      <button id="accept-cookies">
+        OK
+      </button>
+
+      <a
+        href="https://kirkeibyen.dk/politik/cookiepolitik/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cookie-link"
+      >
+        Read more
+      </a>
+
     </div>
 
-    <!-- MINI CHURCH -->
-    <div class="program-view" data-program="mini">
-      <section class="coming-soon">
-        <h2>The program is coming soon</h2>
-        <p>
-          We are still working on the program for Mini Church.
-          Get ready for lots of great activities, community and experiences!
-        </p>
-
-        <p>
-          Would you like to be among the first to hear when the program is ready?
-          Sign up for our newsletter.
-        </p>
-
-        <a data-link="newsletter" rel="noopener noreferrer" class="newsletter-button">
-          Sign up for the newsletter
-        </a>
-      </section>
-
-      <div class="program-download">
-        <h3>Save the program</h3>
-        <p>The program is unfortunately not ready yet. You can download it when it becomes available.</p>
-
-        <div class="program-download-buttons">
-          <button class="download-button save-program-button">
-            📱 Save the program
-          </button>
-
-          <button class="download-button secondary download-pdf-button">
-            📄 Download PDF
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<button class="scroll-top" id="scrollTop" aria-label="Back to top">
-  <svg viewBox="0 0 100 100">
-    <circle class="scroll-progress-bg" cx="50" cy="50" r="45"></circle>
-    <circle class="scroll-progress" cx="50" cy="50" r="45"></circle>
-  </svg>
-
-  <span class="scroll-arrow">↑</span>
-</button>
-
-<div id="footer"></div>
-
-<div id="cookie-banner" class="cookie-banner">
-  <p>We use necessary cookies to improve your experience and ensure that the website works properly.</p>
-  <div class="cookie-actions">
-    <button id="accept-cookies">OK</button>
-    <a href="https://kirkeibyen.dk/politik/cookiepolitik/" target="_blank" rel="noopener noreferrer" class="cookie-link">
-      Read more
-    </a>
   </div>
-</div>
 
-<script src="/assets/js/program.js"></script>
-<script src="/assets/js/script.js"></script>
+
+  <script src="/assets/js/program.js"></script>
+  <script src="/assets/js/script.js"></script>
 
 </body>
 </html>
