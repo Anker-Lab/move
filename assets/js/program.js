@@ -368,3 +368,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+
+/* =========================================
+   PROGRAM POPUPS
+========================================= */
+
+const popupButtons = document.querySelectorAll(
+    "[data-popup]"
+);
+
+
+/* ÅBN POPUP */
+
+popupButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const popupId = button.dataset.popup;
+
+        const popup = document.getElementById(
+            popupId
+        );
+
+        if (popup) {
+
+            popup.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* LUK KNAPPER */
+
+const closeButtons = document.querySelectorAll(
+    ".elective-close"
+);
+
+
+closeButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const popup = button.closest(
+            ".elective-popup"
+        );
+
+        if (popup) {
+
+            popup.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+
+/* LUK VED KLIK UDENFOR */
+
+const popups = document.querySelectorAll(
+    ".elective-popup"
+);
+
+
+popups.forEach(popup => {
+
+    popup.addEventListener("click", event => {
+
+        if (event.target === popup) {
+
+            popup.classList.remove("active");
+
+        }
+
+    });
+
+});

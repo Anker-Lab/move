@@ -561,6 +561,576 @@
 
 
 /* =========================================
+   ELECTIVES
+========================================= */
+
+.program-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-button-black);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-button-black);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.program-btn:hover {
+    background: var(--color-button-black);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   ELECTIVES POPUP
+========================================= */
+
+.elective-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+
+}
+
+
+/* AKTIV POPUP */
+
+.elective-popup.active {
+
+    display: flex;
+
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.elective-popup-box {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 45px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-sizing: border-box;
+
+}
+
+
+/* SCROLLBAR */
+
+.elective-popup-box::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+.elective-popup-box::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.elective-popup-box::-webkit-scrollbar-thumb {
+
+    border-radius: 999px;
+
+    background: #ddd;
+
+}
+
+
+/* =========================================
+   POPUP OVERSKRIFT
+========================================= */
+
+.elective-popup-box > span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+
+}
+
+
+.elective-popup-box h2 {
+
+    margin: 0 0 15px;
+
+    font-size: 38px;
+
+    line-height: 1.1;
+
+}
+
+
+.elective-intro {
+
+    margin: 0 0 35px;
+
+    line-height: 1.6;
+
+    opacity: 0.65;
+
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.elective-close {
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f2f2f2;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.elective-close:hover {
+
+    background: #e5e5e5;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================
+   ELECTIVE ITEM
+========================================= */
+
+.elective-popup .elective-item {
+
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    gap: 28px;
+
+    padding: 22px;
+
+    margin-top: 18px;
+
+    border-radius: 18px;
+
+    background: #f5f5f5;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   ELECTIVE IMAGE
+========================================= */
+
+.elective-image {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #e5e5e5;
+
+}
+
+
+.elective-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   ELECTIVE CONTENT
+========================================= */
+
+.elective-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.elective-content > span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.5;
+
+}
+
+
+.elective-content h3 {
+
+    margin: 0 0 14px;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+
+.elective-content p {
+
+    margin: 0 0 10px;
+
+    line-height: 1.65;
+
+    opacity: 0.7;
+
+}
+
+
+.elective-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================
+   ACTIVITIES POPUP
+========================================= */
+
+.activity-popup-item {
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    margin-top: 18px;
+
+    border-radius: 18px;
+
+    background: #f5f5f5;
+
+}
+
+
+/* =========================================
+   BILLEDE / ILLUSTRATION
+========================================= */
+
+.activity-popup-image {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 16px;
+
+    background: #e5e5e5;
+
+    font-size: 80px;
+
+}
+
+
+/* =========================================
+   TEKST
+========================================= */
+
+.activity-popup-content > span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.5;
+
+}
+
+.activity-popup-content h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+.activity-popup-content p {
+
+    margin: 0;
+
+    line-height: 1.65;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================
+   MOBIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .activity-popup-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 16px;
+
+    }
+
+    .activity-popup-image {
+
+        aspect-ratio: 16 / 9;
+
+        font-size: 65px;
+
+    }
+
+    .activity-popup-content h3 {
+
+        font-size: 22px;
+
+    }
+
+    .activity-popup-content p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .elective-popup {
+
+        align-items: flex-end;
+
+        padding: 10px;
+
+    }
+
+
+    .elective-popup-box {
+
+        max-height: 88vh;
+
+        padding: 35px 20px 25px;
+
+        border-radius: 24px 24px 16px 16px;
+
+    }
+
+
+    /* OVERSKRIFT */
+
+    .elective-popup-box h2 {
+
+        font-size: 28px;
+
+        padding-right: 40px;
+
+    }
+
+
+    .elective-intro {
+
+        margin-bottom: 25px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* LUK KNAP */
+
+    .elective-close {
+
+        top: 15px;
+        right: 15px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 24px;
+
+    }
+
+
+    /* ELECTIVE */
+
+    .elective-popup .elective-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 16px;
+
+        margin-top: 14px;
+
+        border-radius: 16px;
+
+    }
+
+
+    /* BILLEDE */
+
+    .elective-image {
+
+        aspect-ratio: 8 / 9;
+
+        border-radius: 12px;
+
+    }
+
+
+    /* TEKST */
+
+    .elective-content h3 {
+
+        margin-bottom: 10px;
+
+        font-size: 22px;
+
+    }
+
+
+    .elective-content p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+}
+
+
+/* =========================================
    MOBIL
 ========================================= */
 

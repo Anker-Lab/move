@@ -464,8 +464,10 @@
 
                   <p>
                     Har du et spørgsmål?
-                    Her får du mulighed for at stille det og få svar.
+                    Her får du mulighed for at stille det og få svar. Det er helt anonymt.
                   </p>
+
+                  <a class="program-btn" href="https://app.sli.do/event/pM1F8nWQh7v8Ndy2AqnWEw" target="_blank" rel="noopener noreferrer">Du har mulighed for at stille spørgsmål her</a>
 
                 </div>
 
@@ -476,8 +478,7 @@
               <article
                 class="timeline-event"
                 data-start="2026-09-12T14:30"
-                data-end="2026-09-12T15:15"
-              >
+                data-end="2026-09-12T15:15">
 
                 <div class="timeline-time">
                   14:30
@@ -496,12 +497,13 @@
                   </h3>
 
                   <p>
-                    Vælg mellem forskellige aktiviteter og sessions.
-                    Se mere om de forskellige muligheder nedenfor.
+                    Vælg mellem forskellige electives.
                   </p>
 
+                  <button class="program-btn" data-popup="electivePopup">
+                    Læs mere om de forskellige electives her
+                  </button>
                 </div>
-
               </article>
 
 
@@ -541,10 +543,9 @@
 
               <!-- AKTIVITETER -->
               <article
-                class="timeline-event"
-                data-start="2026-09-12T15:30"
-                data-end="2026-09-12T17:00"
-              >
+              class="timeline-event"
+              data-start="2026-09-12T15:30"
+              data-end="2026-09-12T17:00">
 
                 <div class="timeline-time">
                   15:30
@@ -564,46 +565,15 @@
 
                   <p>
                     Eftermiddagen er fyldt med hygge og fællesskab.
-                    Du kan vælge mellem flere forskellige aktiviteter:
+                    Du kan vælge mellem flere forskellige aktiviteter.
                   </p>
 
-                  <div class="activity-list">
-
-                    <div class="activity-item">
-                      <strong>
-                        🎲 Brætspil
-                      </strong>
-
-                      <span>
-                        Hygge og spil i caféen
-                      </span>
-                    </div>
-
-                    <div class="activity-item">
-                      <strong>
-                        🏆 Stigegolf & petanque
-                      </strong>
-
-                      <span>
-                        Aktiviteter udenfor foran Samværket
-                      </span>
-                    </div>
-
-                    <div class="activity-item">
-                      <strong>
-                        🚶 Gåtur
-                      </strong>
-
-                      <span>
-                        En hyggelig gåtur med afgang
-                        fra hovedindgangen
-                      </span>
-                    </div>
-
-                  </div>
-
+                  <button
+                  class="program-btn"
+                  data-popup="activitiesPopup">
+                    Se de forskellige aktiviteter
+                  </button>
                 </div>
-
               </article>
 
 
@@ -1420,6 +1390,211 @@
         </div>
       </div>
     </section>
+
+    <!-- ELECTIVES POPUP -->
+<div class="elective-popup" id="electivePopup">
+
+  <div class="elective-popup-box">
+
+    <button
+      class="elective-close"
+      id="electiveClose"
+      aria-label="Luk"
+    >
+      ×
+    </button>
+
+
+    <span>
+      ELECTIVES
+    </span>
+
+    <h2>
+      Vælg din session
+    </h2>
+
+    <p class="elective-intro">
+      Her kan du læse mere om de forskellige sessions.
+    </p>
+
+
+    <!-- KAREN HARVEY -->
+    <div class="elective-item">
+
+      <div class="elective-image">
+
+        <img
+          src="/assets/images/program/Karen-coaching.jpeg"
+          alt="Karen Harvey"
+        >
+
+      </div>
+
+
+      <div class="elective-content">
+
+        <span>
+          WORKSHOP
+        </span>
+
+        <h3>
+          Karen Harvey
+        </h3>
+
+        <p>
+          Karen Harvey vil tale om, hvordan vi kan få et sundere sind 
+          og tankeliv ved at åbne op for gode tanker og følelser og 
+          lukke ned for de dårlige. En konkret elective med redskaber til et sundt indre liv.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- KAMILLA SEERUP -->
+    <div class="elective-item">
+
+      <div class="elective-image">
+
+        <img
+          src="/assets/images/program/KAMILLA.avif"
+          alt="Kamilla Seerup"
+        >
+
+      </div>
+
+
+      <div class="elective-content">
+
+        <span>
+          WORKSHOP
+        </span>
+
+        <h3>
+          Kamilla Seerup
+        </h3>
+
+        <p>
+          Kamilla Seerup holder en workshop om at navigere i livets valg. 
+          Med erfaring fra både eget liv og arbejdet med unge vil hun give 
+          redskaber til at finde vej gennem vigtige beslutninger.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>  
+
+<!-- ACTIVITIES POPUP -->
+<div
+class="elective-popup"
+id="activitiesPopup">
+  <div class="elective-popup-box">
+
+    <button
+      class="elective-close"
+      aria-label="Luk">
+      ×
+    </button>
+
+    <span>
+      AKTIVITETER
+    </span>
+
+    <h2>
+      Eftermiddag med aktiviteter
+    </h2>
+
+    <p class="elective-intro">
+      Vælg mellem forskellige aktiviteter og brug
+      eftermiddagen sammen med de andre på MOVE.
+    </p>
+
+
+    <!-- BRÆTSPIL -->
+    <div class="activity-popup-item">
+
+      <div class="activity-popup-image">
+        🎲
+      </div>
+
+      <div class="activity-popup-content">
+
+        <span>
+          CAFÉEN
+        </span>
+
+        <h3>
+          Brætspil
+        </h3>
+
+        <p>
+          Kom og vær med til hygge og forskellige spil
+          sammen med de andre i caféen.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- STIGE GOLF -->
+    <div class="activity-popup-item">
+
+      <div class="activity-popup-image">
+        🏆
+      </div>
+
+      <div class="activity-popup-content">
+
+        <span>
+          UDENFOR
+        </span>
+
+        <h3>
+          Stigegolf & petanque
+        </h3>
+
+        <p>
+          Hygge og konkurrence udenfor foran Samværket.
+          Alle kan være med!
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- STIGE GOLF -->
+    <div class="activity-popup-item">
+
+      <div class="activity-popup-image">
+        🚶
+      </div>
+
+      <div class="activity-popup-content">
+
+        <span>
+          HOVEDINDGANGEN
+        </span>
+
+        <h3>
+          Gåtur
+        </h3>
+
+        <p>
+          Tag med på en hyggelig gåtur med afgang
+          fra hovedindgangen.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
   </main>
 
 
