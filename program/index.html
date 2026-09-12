@@ -39,12 +39,12 @@
     type="image/png"
   >
 
-  <link rel="stylesheet" href="/assets/css/general/style.css?v=100926">
-  <link rel="stylesheet" href="/assets/css/general/layout.css?v=100926">
-  <link rel="stylesheet" href="/assets/css/general/header.css?v=100926">
-  <link rel="stylesheet" href="/assets/css/general/footer.css?v=100926">
-  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=100926">
-  <link rel="stylesheet" href="/assets/css/sites/program.css?v=100926">
+  <link rel="stylesheet" href="/assets/css/general/style.css?v=120926">
+  <link rel="stylesheet" href="/assets/css/general/layout.css?v=120926">
+  <link rel="stylesheet" href="/assets/css/general/header.css?v=120926">
+  <link rel="stylesheet" href="/assets/css/general/footer.css?v=120926">
+  <link rel="stylesheet" href="/assets/css/sites/info_program.css?v=120926">
+  <link rel="stylesheet" href="/assets/css/sites/program.css?v=120926">
 </head>
 
 
@@ -750,14 +750,10 @@
         >
 
 
-          <!-- FREDAG - KUN ÉT EVENT -->
-          <section
-            class="single-event"
-            data-start="2026-09-11T19:15"
-            data-end="2026-09-11T21:00"
-          >
+          <!-- Fredag -->
+          <section class="program-day">
 
-            <div class="sunday-heading">
+            <div class="day-heading">
 
               <span>
                 11. SEPTEMBER
@@ -770,32 +766,71 @@
             </div>
 
 
-            <div class="single-event-card">
+            <div class="timeline">
 
-              <div class="single-event-time">
-                19:15
-              </div>
 
-              <div class="single-event-content">
+              <!-- Check-in -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T09:30"
+                data-end="2026-09-11T11:30"
+              >
 
-                <span>
-                  Børnekirke-rummet
-                </span>
+                <div class="timeline-time">
+                  18:00
+                </div>
 
-                <h3>
-                  Aftenmøde
-                </h3>
+                <div class="timeline-dot"></div>
 
-                <p>
-                  Efter de første to sange går vi til Børnekirke-rummet,
-                  hvor der venter fællesskab, aktiviteter og en fed aften
-                  sammen.
-                </p>
+                <div class="timeline-card">
 
-              </div>
+                  <span>
+                    ANKOMST
+                  </span>
 
+                  <h3>
+                    Check-in
+                  </h3>
+
+                  <p>
+                    Velkommen til MOVE! Du kan checke ind ved Samværkets hovedindgang.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LIVESTREAM -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T19:00"
+                data-end="2026-09-11T21:00">
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Møde & aktiviteter
+                  </h3>
+
+                  <p>
+                    Efter de første to sange går vi sammen til Teen-rummet
+                    og lokale 1 på 1. sal, hvor der venter sjove aktiviteter,
+                    fællesskab og en fed aften.
+                  </p>
+                </div>
+              </article>
             </div>
-
           </section>
 
 
@@ -821,7 +856,7 @@
               <!-- FORMIDDAG -->
               <article
                 class="timeline-event"
-                data-start="2026-09-12T09:30"
+                data-start="2026-09-11T09:30"
                 data-end="2026-09-12T11:30"
               >
 
@@ -842,8 +877,40 @@
                   </h3>
 
                   <p>
-                    Vi samles i Børnekirke-rummet til en formiddag
+                    Vi samles i lokale 1 på 1. sal til en formiddag
                     med aktiviteter, fællesskab og tid sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- FROKOST -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T12:00"
+                data-end="2026-09-12T12:30"
+              >
+
+                <div class="timeline-time">
+                  12:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Frokost
+                  </h3>
+
+                  <p>
+                    Vi samles til frokost og godt fællesskab. Frokosten er inkluderet i din billet.
                   </p>
 
                 </div>
@@ -871,12 +938,82 @@
                   </span>
 
                   <h3>
-                    Aktiviteter
+                    Møde & Aktiviteter
                   </h3>
 
                   <p>
-                    Vi fortsætter fællesskabet i Børnekirke-rummet
+                    Vi fortsætter fællesskabet i Lokale 1 på 1. sal
                     med aktiviteter og tid sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- EFTERMIDDAG -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T15:15"
+                data-end="2026-09-12T17:00"
+              >
+
+                <div class="timeline-time">
+                  15:15
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Hygge i caféen
+                  </h3>
+
+                  <p>
+                    Vi hygger med brætspil og fællesskab i caféen.
+                  </p>
+
+                  <button
+                  class="program-btn"
+                  data-popup="activitiesPopup">
+                    Se de forskellige aktiviteter
+                  </button>
+
+                </div>
+
+              </article>
+
+
+              <!-- AFTENSMAD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T17:00"
+                data-end="2026-09-12T17:30"
+              >
+
+                <div class="timeline-time">
+                  17:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Aftensmad
+                  </h3>
+
+                  <p>
+                    Vi samles til aftenmad og godt fællesskab. Aftensmaden er inkluderet i din billet.
                   </p>
 
                 </div>
@@ -900,16 +1037,15 @@
                 <div class="timeline-card">
 
                   <span>
-                    Bålpladsen
+                    Salen
                   </span>
 
                   <h3>
-                    Aftenprogram
+                    Møde
                   </h3>
 
                   <p>
-                    Efter de første to sange kan du vælge mellem
-                    bålhygge eller at blive med til gudstjenesten.
+                    Vi samles i salen til lovsang, fællesskab og et budskab fra Gud.
                   </p>
                 </div>
               </article>
@@ -978,14 +1114,10 @@
         >
 
 
-          <!-- FREDAG - KUN ÉT EVENT -->
-          <section
-            class="single-event"
-            data-start="2026-09-11T19:15"
-            data-end="2026-09-11T21:00"
-          >
+          <!-- Fredag -->
+          <section class="program-day">
 
-            <div class="sunday-heading">
+            <div class="day-heading">
 
               <span>
                 11. SEPTEMBER
@@ -998,32 +1130,71 @@
             </div>
 
 
-            <div class="single-event-card">
+            <div class="timeline">
 
-              <div class="single-event-time">
-                19:15
-              </div>
 
-              <div class="single-event-content">
+              <!-- Check-in -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T18:00"
+                data-end="2026-09-11T19:00"
+              >
 
-                <span>
-                  Teen-rummet & lokale 1 på 1. sal
-                </span>
+                <div class="timeline-time">
+                  18:00
+                </div>
 
-                <h3>
-                  Møde & aktiviteter
-                </h3>
+                <div class="timeline-dot"></div>
 
-                <p>
-                  Efter de første to sange går vi sammen til Teen-rummet
-                  og lokale 1 på 1. sal, hvor der venter sjove aktiviteter,
-                  fællesskab og en fed aften.
-                </p>
+                <div class="timeline-card">
 
-              </div>
+                  <span>
+                    ANKOMST
+                  </span>
 
+                  <h3>
+                    Check-in
+                  </h3>
+
+                  <p>
+                    Velkommen til MOVE! Du kan checke ind ved Samværkets hovedindgang.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LIVESTREAM -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T19:00"
+                data-end="2026-09-11T21:00">
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Møde & aktiviteter
+                  </h3>
+
+                  <p>
+                    Efter de første to sange går vi sammen til Teen-rummet
+                    og lokale 1 på 1. sal, hvor der venter sjove aktiviteter,
+                    fællesskab og en fed aften.
+                  </p>
+                </div>
+              </article>
             </div>
-
           </section>
 
 
@@ -1079,6 +1250,38 @@
               </article>
 
 
+              <!-- FROKOST -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T12:00"
+                data-end="2026-09-12T12:30"
+              >
+
+                <div class="timeline-time">
+                  12:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Frokost
+                  </h3>
+
+                  <p>
+                    Vi samles til frokost og godt fællesskab. Frokosten er inkluderet i din billet.
+                  </p>
+
+                </div>
+
+              </article>
+
+
               <!-- SKATEBOARD -->
               <article
                 class="timeline-event"
@@ -1113,6 +1316,38 @@
               </article>
 
 
+              <!-- AFTENSMAD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T17:00"
+                data-end="2026-09-12T17:30"
+              >
+
+                <div class="timeline-time">
+                  17:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Aftensmad
+                  </h3>
+
+                  <p>
+                    Vi samles til aftenmad og godt fællesskab. Aftensmaden er inkluderet i din billet.
+                  </p>
+
+                </div>
+
+              </article>
+
+
               <!-- BÅL -->
               <article
                 class="timeline-event"
@@ -1129,17 +1364,17 @@
                 <div class="timeline-card">
 
                   <span>
-                    Bålpladsen
+                    Teen-rummet
                   </span>
 
                   <h3>
-                    Bålhygge
+                    Møde og aktiviteter
                   </h3>
 
                   <p>
-                    Efter de første to sange samles vi til en hyggelig
-                    aften med bål, fællesskab og masser af gode oplevelser.
-                    Vi er enten udenfor eller i hallen.
+                    Efter de første to sange går vi sammen til Teen-rummet
+                    og lokale 1 på 1. sal, hvor der venter sjove aktiviteter,
+                    fællesskab og en fed aften.
                   </p>
                 </div>
               </article>
@@ -1206,13 +1441,10 @@
           class="program-view"
           data-program="mini">
 
-          <!-- FREDAG - KUN ÉT EVENT -->
-          <section
-            class="single-event"
-            data-start="2026-09-11T19:00"
-            data-end="2026-09-11T21:00">
+          <!-- Fredag -->
+          <section class="program-day">
 
-            <div class="sunday-heading">
+            <div class="day-heading">
 
               <span>
                 11. SEPTEMBER
@@ -1225,31 +1457,70 @@
             </div>
 
 
-            <div class="single-event-card">
+            <div class="timeline">
 
-              <div class="single-event-time">
-                19:00
-              </div>
 
-              <div class="single-event-content">
+              <!-- Check-in -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T18:00"
+                data-end="2026-09-11T19:00"
+              >
 
-                <span>
-                  Familierummet
-                </span>
+                <div class="timeline-time">
+                  18:00
+                </div>
 
-                <h3>
-                  Livestream & hygge
-                </h3>
+                <div class="timeline-dot"></div>
 
-                <p>
-                  Slå jer ned i familierummet og følg med via livestream,
-                  mens børnene kan lege og hygge sig i trygge omgivelser.
-                </p>
+                <div class="timeline-card">
 
-              </div>
+                  <span>
+                    ANKOMST
+                  </span>
 
+                  <h3>
+                    Check-in
+                  </h3>
+
+                  <p>
+                    Velkommen til MOVE! Du kan checke ind ved Samværkets hovedindgang.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- LIVESTREAM -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-11T19:00"
+                data-end="2026-09-11T21:00">
+
+                <div class="timeline-time">
+                  19:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Livestream & hygge
+                  </h3>
+
+                  <p>
+                    Slå jer ned i caféen og følg med via livestream,
+                    mens børnene kan lege og hygge sig i trygge omgivelser.
+                  </p>
+                </div>
+              </article>
             </div>
-
           </section>
 
 
@@ -1288,7 +1559,7 @@
                 <div class="timeline-card">
 
                   <span>
-                    Familierummet
+                    1. SAL, 1. LOKALE
                   </span>
 
                   <h3>
@@ -1297,8 +1568,105 @@
 
                   <p>
                     Mini MOVE er et hyggeligt fællesskab for de mindste.
-                    Vi samles i familierummet, hvor der er plads til leg,
+                    Vi samles på 1. sal, hvor der er plads til leg,
                     hygge og gode oplevelser sammen.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- FROKOST -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T12:00"
+                data-end="2026-09-12T12:30"
+              >
+
+                <div class="timeline-time">
+                  12:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Frokost
+                  </h3>
+
+                  <p>
+                    Vi samles til frokost og godt fællesskab. Frokosten er inkluderet i din billet.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- AKTIVITET -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T13:00"
+                data-end="2026-09-12T17:00"
+              >
+
+                <div class="timeline-time">
+                  13:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Aktiviteter & hygge
+                  </h3>
+
+                  <p>
+                    Mini MOVE følger voksenprogrammet.
+                    I caféen er der mulighed for at lege med dit barn, hvor der også er legetøj.
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <!-- AFTENSMAD -->
+              <article
+                class="timeline-event"
+                data-start="2026-09-12T17:00"
+                data-end="2026-09-12T17:30"
+              >
+
+                <div class="timeline-time">
+                  17:00
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                  <span>
+                    Caféen
+                  </span>
+
+                  <h3>
+                    Aftensmad
+                  </h3>
+
+                  <p>
+                    Vi samles til aftenmad og godt fællesskab. Aftensmaden er inkluderet i din billet.
                   </p>
 
                 </div>
@@ -1310,8 +1678,7 @@
               <article
                 class="timeline-event"
                 data-start="2026-09-12T19:00"
-                data-end="2026-09-12T21:00"
-              >
+                data-end="2026-09-12T21:00">
 
                 <div class="timeline-time">
                   19:00
@@ -1322,7 +1689,7 @@
                 <div class="timeline-card">
 
                   <span>
-                    Familierummet
+                    Caféen
                   </span>
 
                   <h3>
@@ -1330,7 +1697,7 @@
                   </h3>
 
                   <p>
-                    Slå jer ned i familierummet og følg med via livestream,
+                    Slå jer ned i caféen og følg med via livestream,
                     mens børnene kan lege og hygge sig i trygge omgivelser.
                   </p>
                 </div>
